@@ -76,6 +76,69 @@
       cursor: pointer;
     }
 
+    .slider {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 400%; /* عدد الصور مضروب في 100% */
+}
+
+.slides img {
+  width: 100%;
+  height: auto;
+}
+
+.navigation {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+}
+
+.navigation button {
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.navigation button:hover {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.indicators {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+
+.indicators span {
+  width: 10px;
+  height: 10px;
+  background: white;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.indicators span.active {
+  background: red;
+}
+    
     /* Hero Section */
     .hero {
       background: url('images/hero.jpg') no-repeat center center/cover;
@@ -217,6 +280,29 @@
     </div>
   </div>
 
+  <div class="slider">
+  <div class="slides">
+    <img src="images/slide1.jpg" alt="Slide 1">
+    <img src="images/slide2.jpg" alt="Slide 2">
+    <img src="images/slide3.jpg" alt="Slide 3">
+    <img src="images/slide4.jpg" alt="Slide 4">
+  </div>
+
+  <!-- Navigation Buttons -->
+  <div class="navigation">
+    <button id="prev">❮</button>
+    <button id="next">❯</button>
+  </div>
+
+  <!-- Indicators -->
+  <div class="indicators">
+    <span class="active" data-slide="0"></span>
+    <span data-slide="1"></span>
+    <span data-slide="2"></span>
+    <span data-slide="3"></span>
+  </div>
+</div>
+  
   <!-- Hero Section -->
   <div class="hero">
     <div>
@@ -258,6 +344,37 @@
       <i class="fab fa-instagram"></i>
     </p>
   </footer>
+
+  const slides = document.querySelector('.slides');
+const indicators = document.querySelectorAll('.indicators span');
+const prev = document.getElementById('prev');
+const next = document.getElementById('next');
+
+let currentIndex = 0;
+
+function updateSlider(index) {
+  slides.style.transform = translateX(-${index * 100}%);
+  indicators.forEach((indicator, i) => {
+    indicator.classList.toggle('active', i === index);
+  });
+}
+
+prev.addEventListener('click', () => {
+  currentIndex = (currentIndex === 0) ? indicators.length - 1 : currentIndex - 1;
+  updateSlider(currentIndex);
+});
+
+next.addEventListener('click', () => {
+  currentIndex = (currentIndex === indicators.length - 1) ? 0 : currentIndex + 1;
+  updateSlider(currentIndex);
+});
+
+indicators.forEach((indicator, i) => {
+  indicator.addEventListener('click', () => {
+    currentIndex = i;
+    updateSlider(currentIndex);
+  });
+});
 
 </body>
 </html>
