@@ -3,9 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Responsive Header</title>
+  <title>Complete Page</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <style>
+    /* Reset CSS */
     * {
       margin: 0;
       padding: 0;
@@ -14,6 +15,8 @@
 
     body {
       font-family: 'Arial', sans-serif;
+      line-height: 1.6;
+      color: #333;
     }
 
     /* Header Styles */
@@ -26,16 +29,12 @@
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     }
 
-    /* Menu Icon */
     .menu-icon {
       font-size: 18px;
       cursor: pointer;
       color: #333;
-      display: flex;
-      align-items: center;
     }
 
-    /* Logo Section */
     .logo {
       display: flex;
       align-items: center;
@@ -54,7 +53,6 @@
       color: #333;
     }
 
-    /* Navigation Items */
     .nav-items {
       display: flex;
       align-items: center;
@@ -71,10 +69,6 @@
       margin-right: 10px;
     }
 
-    .nav-items .btn:hover {
-      background-color: #e44141;
-    }
-
     .nav-items i {
       font-size: 16px;
       color: #333;
@@ -82,40 +76,139 @@
       cursor: pointer;
     }
 
-    .nav-items i:hover {
-      color: #ff4c4c;
+    /* Hero Section */
+    .hero {
+      background: url('https://via.placeholder.com/1500x800') no-repeat center center/cover;
+      height: 90vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+      padding: 20px;
     }
 
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+    }
+
+    .hero button {
+      background-color: #ff4c4c;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 20px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .hero button:hover {
+      background-color: #e44141;
+      transform: scale(1.1);
+    }
+
+    /* Features Section */
+    .features {
+      padding: 50px 20px;
+      background: #f8f8f8;
+      text-align: center;
+    }
+
+    .features h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .features .feature-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .feature {
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .feature img {
+      width: 50px;
+      margin-bottom: 15px;
+    }
+
+    .feature h3 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+
+    .feature p {
+      font-size: 1rem;
+      color: #555;
+    }
+
+    /* Footer Section */
+    footer {
+      background: #222;
+      color: white;
+      text-align: center;
+      padding: 20px 10px;
+    }
+
+    footer p {
+      margin: 10px 0;
+    }
+
+    footer i {
+      color: #ff4c4c;
+      margin: 0 10px;
+    }
+
+    footer i:hover {
+      color: white;
+    }
+
+    /* Responsive Design */
     @media (max-width: 768px) {
-      .nav-items .btn {
-        padding: 5px 10px;
-        font-size: 11px;
+      .hero h1 {
+        font-size: 2.5rem;
       }
 
-      .nav-items i {
-        font-size: 14px;
+      .hero p {
+        font-size: 1rem;
       }
 
-      .logo span {
-        font-size: 14px;
+      .hero button {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+      }
+
+      .features .feature-container {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       }
     }
   </style>
 </head>
 <body>
+
+  <!-- Header Section -->
   <div class="header">
-    <!-- Menu Icon -->
     <div class="menu-icon">
       <i class="fas fa-bars"></i>
     </div>
-
-    <!-- Logo -->
     <div class="logo">
       <img src="https://via.placeholder.com/40" alt="Logo">
       <span>My Brand</span>
     </div>
-
-    <!-- Navigation Items -->
     <div class="nav-items">
       <button class="btn">Boutique</button>
       <i class="fas fa-search"></i>
@@ -123,35 +216,34 @@
       <i class="fas fa-shopping-cart"></i>
     </div>
   </div>
-</body>
 
   <!-- Hero Section -->
-  <section class="hero">
+  <div class="hero">
     <div>
-      <h1>Smart Cleaning, Simplified</h1>
-      <p>Transform your home with our advanced robotic cleaners.</p>
+      <h1>Welcome to Smart Cleaning</h1>
+      <p>Transform your home with the best robotic cleaners.</p>
       <button>Explore Now</button>
     </div>
-  </section>
+  </div>
 
   <!-- Features Section -->
   <section class="features">
     <h2>Our Features</h2>
     <div class="feature-container">
       <div class="feature">
-        <img src="https://via.placeholder.com/60" alt="Efficiency">
+        <img src="https://via.placeholder.com/50" alt="Feature 1">
         <h3>High Efficiency</h3>
         <p>Cleans every corner with unmatched precision.</p>
       </div>
       <div class="feature">
-        <img src="https://via.placeholder.com/60" alt="Technology">
+        <img src="https://via.placeholder.com/50" alt="Feature 2">
         <h3>Smart Technology</h3>
-        <p>AI-powered robots for optimal performance.</p>
+        <p>AI-powered robots for better cleaning.</p>
       </div>
       <div class="feature">
-        <img src="https://via.placeholder.com/60" alt="Eco-Friendly">
+        <img src="https://via.placeholder.com/50" alt="Feature 3">
         <h3>Eco-Friendly</h3>
-        <p>Energy-saving and sustainable solutions.</p>
+        <p>Save energy and clean responsibly.</p>
       </div>
     </div>
   </section>
@@ -166,5 +258,6 @@
       <i class="fab fa-instagram"></i>
     </p>
   </footer>
+
 </body>
 </html>
