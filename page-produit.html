@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>روبوروك كريڤو كورف - صفحة المنتج</title>
+    <title>Roborock Qrevo Curv - Page Produit</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -21,46 +21,105 @@
         }
         .product-image {
             width: 100%;
-            max-width: 500px;
+            max-width: 600px;
             margin-bottom: 20px;
+            border-radius: 10px;
         }
         .product-title {
-            font-size: 2rem;
+            font-size: 2.5rem;
             color: #333;
             margin-bottom: 10px;
+            font-weight: bold;
         }
         .product-description {
             color: #555;
-            line-height: 1.6;
-            margin-bottom: 20px;
+            line-height: 1.8;
+            margin-bottom: 30px;
+            font-size: 1.1rem;
         }
         .product-price {
-            font-size: 1.6rem;
+            font-size: 1.8rem;
             font-weight: bold;
             color: red;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
         }
         .buy-button {
             background-color: red;
             color: white;
             border: none;
-            padding: 10px 20px;
+            padding: 15px 30px;
             border-radius: 5px;
-            font-size: 1rem;
+            font-size: 1.2rem;
             cursor: pointer;
             font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+        .buy-button:hover {
+            background-color: #e44141;
+        }
+        .shipping-companies {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 40px;
+        }
+        .shipping-companies img {
+            width: 80px;
+            height: auto;
+        }
+        .reviews-container {
+            margin-top: 50px;
+            border-top: 1px solid #ddd;
+            padding-top: 30px;
+        }
+        .review {
+            border-bottom: 1px solid #eee;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+        }
+        .review-stars {
+            color: #ff9900;
+            font-size: 1.2rem;
+        }
+        .review-text {
+            color: #555;
+            font-size: 1rem;
+            margin-top: 10px;
         }
     </style>
 </head>
 <body>
     <div class="product-container">
-        <img src="roborock-qrevo-curv-a-1.webp" class="product-image" alt="روبوروك كريڤو كورف">
-        <h1 class="product-title">مكنسة روبوت روبوروك كريڤو كورف</h1>
+        <img src="roborock-qrevo-curv-a-1.webp" class="product-image" alt="Roborock Qrevo Curv">
+        <h1 class="product-title">Aspirateur robot Roborock Qrevo Curv</h1>
         <p class="product-description">
-            اكتشف روبوروك كريڤو كورف، الذي يجمع بين الأناقة والابتكار. يوفر نظامه المزدوج ضد التشابك و هيكل AdaptiLift™ أداء استثنائي من خلال تجنب تشابك الشعر والتكيف مع أنواع الأرضيات المختلفة لتوفير تنظيف شامل بلا مشاكل. قوة الشفط HyperForce® البالغة 18,500 باسكال وتقنية FlexiArm™ تجعله يصل إلى أصغر الزوايا بفعالية.
+            Découvrez le Roborock Qrevo Curv, un aspirateur robot alliant élégance et technologie de pointe. Son système anti-enchevêtrement double et son châssis AdaptiLift™ offrent des performances exceptionnelles, tout en s’adaptant aux différents types de sols. Grâce à sa puissance d'aspiration HyperForce® de 18 500 Pa et à sa technologie FlexiArm™, il atteint tous les recoins de votre maison pour un nettoyage impeccable.
         </p>
         <div class="product-price">799€</div>
-        <button class="buy-button">شراء الآن</button>
+        <button class="buy-button">Acheter Maintenant</button>
+
+        <!-- Sociétés de Livraison -->
+        <div class="shipping-companies">
+            <img src="logo_dhl.png" alt="DHL">
+            <img src="logo_colissimo.png" alt="Colissimo">
+            <img src="logo_ups.png" alt="UPS">
+        </div>
+        
+        <!-- Commentaires des Clients -->
+        <div class="reviews-container">
+            <h2>Commentaires</h2>
+            <div class="review">
+                <div class="review-stars">★★★★★</div>
+                <div class="review-text">"Ce robot aspirateur est incroyable ! Il nettoie ma maison parfaitement et sans effort. Je ne pourrais plus m'en passer. Je le recommande vivement!" - Marie L.</div>
+            </div>
+            <div class="review">
+                <div class="review-stars">★★★★★</div>
+                <div class="review-text">"Très satisfait de mon achat. L'aspiration est puissante, et il se déplace facilement partout dans la maison. Livraison rapide et service client au top." - Jean-Pierre D.</div>
+            </div>
+            <div class="review">
+                <div class="review-stars">★★★★★</div>
+                <div class="review-text">"Produit top ! Il nettoie même les coins difficiles d'accès. Très efficace et pratique. Livraison rapide, bravo à l'équipe !" - Sophie R.</div>
+            </div>
+        </div>
     </div>
 </body>
 </html>
