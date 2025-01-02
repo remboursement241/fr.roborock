@@ -109,14 +109,25 @@
 }
 
 .navigation {
-  position: absolute;
-  top: 50%;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  transform: translateY(-50%);
+button.prev, button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 10;
 }
 
+button.prev {
+    left: 10px;
+}
+
+button.next {
+    right: 10px;
+}
 .navigation button {
   background: rgba(0, 0, 0, 0.5);
   color: white;
@@ -384,7 +395,9 @@
 " alt="Slide 3">
     <img src="Roborock_Qrevo_Slim_Launch_PC.webp
 " alt="Slide 4">
-  </div>
+  <button class="prev">‹</button>
+    <button class="next">›</button>
+</div>
 
   <!-- Navigation Buttons -->
   <div class="navigation">
@@ -481,18 +494,22 @@
 </footer>
 
   <script>
-    const slides = document.querySelector('.slides');
-    const indicators = document.querySelectorAll('.indicators span');
-    const prev = document.getElementById('prev');
-    const next = document.getElementById('next');
+    const slides = document.querySelectorAll('.slides');
+let currentIndex = 0;
 
-    let currentIndex = 0;
+function showSlide(index) {
+    slides[0].style.transform = translateX(-${index * 100}%);
+}
 
-    function updateSlider(index) {
-      slides.style.transform = translateX(-${index * 100}%);
-      indicators.forEach((indicator, i) => {
-        indicator.classList.toggle('active', i === index);
-      });
+document.querySelector('.prev').addEventListener('click', () => {
+    currentIndex = (currentIndex > 0) ? currentIndex - 1 : slides.length - 1;
+    showSlide(currentIndex);
+});
+
+document.querySelector('.next').addEventListener('click', () => {
+    currentIndex = (currentIndex < slides.length - 1) ? currentIndex + 1 : 0;
+    showSlide(currentIndex);
+});
     }
 
     prev.addEventListener('click', () => {
