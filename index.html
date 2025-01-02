@@ -77,23 +77,35 @@
     }
 
     .slider {
-  position: relative;
-  width: 100%;
-  max-width: 200px;
-  margin: auto;
-  overflow: hidden;
-  border-radius: 8px;
+    position: relative;
+    width: 100%;
+    max-width: 300px; /* حجم مناسب للهواتف */
+    margin: auto;
+    overflow: hidden;
+    border-radius: 8px;
 }
 
 .slides {
-  display: flex;
-  transition: transform 0.5s ease-in-out;
-  width: 400%; /* عدد الصور مضروب في 100% */
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
 }
 
 .slides img {
-  width: 100%;
-  height: auto;
+    width: 100%;
+    height: auto;
+}
+
+/* Media Query للهواتف */
+@media (max-width: 768px) {
+    .slider {
+        max-width: 90%; /* يجعل العرض يتناسب مع شاشة الهاتف */
+    }
+
+    .slides img {
+        max-width: 100%;
+        height: auto; /* يحافظ على تناسب الصور */
+    }
 }
 
 .navigation {
