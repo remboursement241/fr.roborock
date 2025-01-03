@@ -4,12 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulaire de Contact</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="floating-container">
-        <h2 class="floating-title">Renseignez vos coordonnées dans le formulaire ci-après afin que nous vous redirigions vers le conseiller le plus proche de chez vous</h2>
-    </div>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -18,7 +13,7 @@
             background-color: #f4f4f4;
         }
         header {
-            background-color: #333;
+            background-color: #FF5733; /* Rouge-orange */
             color: white;
             text-align: center;
             padding: 20px 0;
@@ -26,6 +21,14 @@
         header h1 {
             margin: 0;
             font-size: 2rem;
+        }
+        .promo-banner {
+            background-color: #d1352d; /* Darker red */
+            color: white;
+            padding: 10px 0;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-align: center;
         }
         .container {
             width: 70%;
@@ -37,7 +40,7 @@
         }
         h2 {
             text-align: center;
-            color: #2e8b57;
+            color: #FF5733; /* Rouge-orange */
         }
         .form-group {
             margin-bottom: 20px;
@@ -57,14 +60,14 @@
             background-color: #f9f9f9;
         }
         .form-group input[type="submit"] {
-            background-color: #2e8b57;
+            background-color: #FF5733; /* Rouge-orange */
             color: white;
             border: none;
             cursor: pointer;
             font-weight: bold;
         }
         .form-group input[type="submit"]:hover {
-            background-color: #255d40;
+            background-color: #d1352d; /* Darker red */
         }
         .separator {
             margin: 40px 0;
@@ -72,7 +75,7 @@
         }
         .footer {
             text-align: center;
-            background-color: #333;
+            background-color: #FF5733; /* Rouge-orange */
             color: white;
             padding: 10px;
             position: fixed;
@@ -89,6 +92,11 @@
     </style>
 </head>
 <body>
+    <!-- Promo Banner -->
+    <div class="promo-banner">
+        Profitez de notre offre exceptionnelle -60% sur tous les produits pour la nouvelle année ! Ne manquez pas cette occasion !
+    </div>
+
     <header>
         <h1>Formulaire de Contact</h1>
     </header>
