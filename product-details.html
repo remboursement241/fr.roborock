@@ -6,92 +6,113 @@
     <title>Roborock S8 MaxV Ultra - Achat en ligne</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
+        /* Reset CSS pour une meilleure compatibilité */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
             font-family: 'Poppins', sans-serif;
             background-color: #f7f7f7;
-            margin: 0;
-            padding: 0;
+            color: #333;
         }
-        .product-container {
-            width: 100%;
+
+        .container {
             max-width: 1200px;
             margin: 50px auto;
             background-color: #fff;
+            padding: 30px;
             border-radius: 10px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            padding: 40px;
         }
+
+        /* Image du produit */
         .product-image {
             width: 100%;
             max-width: 600px;
             margin: 0 auto;
             display: block;
             border-radius: 10px;
-            margin-bottom: 30px;
         }
+
         .product-title {
             font-size: 2rem;
-            color: #333;
             font-weight: 600;
-            margin-bottom: 20px;
+            color: #333;
+            margin: 20px 0;
         }
+
         .product-description {
-            color: #666;
-            line-height: 1.7;
-            margin-bottom: 30px;
             font-size: 1.1rem;
+            color: #555;
+            margin-bottom: 30px;
+            line-height: 1.7;
         }
+
         .product-price {
-            font-size: 2rem;
-            font-weight: 700;
+            font-size: 2.2rem;
             color: #e4393c;
+            font-weight: 700;
             margin-bottom: 20px;
         }
+
         .buy-button {
             background-color: #e4393c;
             color: white;
-            border: none;
-            padding: 16px 40px;
             font-size: 1.2rem;
-            cursor: pointer;
-            font-weight: 600;
+            padding: 16px 40px;
             border-radius: 5px;
-            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            font-weight: 600;
         }
+
         .buy-button:hover {
             background-color: #b92f2a;
         }
 
-        /* Style Formulaire */
+        /* Formulaire de Livraison */
         #delivery-form {
             display: none;
             margin-top: 30px;
-            padding: 30px;
             background-color: #f9f9f9;
+            padding: 30px;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease;
         }
+
         #delivery-form h2 {
             font-size: 1.8rem;
             color: #333;
             margin-bottom: 20px;
             font-weight: 600;
         }
+
+        #delivery-form label {
+            font-size: 1.1rem;
+            margin-top: 10px;
+        }
+
         #delivery-form input, #delivery-form textarea {
             width: 100%;
             padding: 12px 18px;
-            margin: 10px 0;
+            margin-top: 10px;
             border: 1px solid #ccc;
             border-radius: 5px;
             font-size: 1rem;
             background-color: #fff;
             box-sizing: border-box;
         }
+
         #delivery-form input:focus, #delivery-form textarea:focus {
             border-color: #e4393c;
             outline: none;
         }
+
         #delivery-form button {
             background-color: #2dca83;
             color: white;
@@ -103,6 +124,7 @@
             cursor: pointer;
             transition: background-color 0.3s ease;
         }
+
         #delivery-form button:hover {
             background-color: #259f6e;
         }
@@ -112,26 +134,30 @@
             display: flex;
             justify-content: space-between;
             margin-top: 30px;
-            max-width: 400px;
-            margin: 0 auto;
+            max-width: 500px;
+            margin: 20px auto;
         }
+
         .shipping-companies img {
             width: 100px;
             height: auto;
         }
 
-        /* Avis des clients */
+        /* Avis */
         .review-stars {
             color: #ff9900;
         }
+
         .review-stars-large {
             color: #ff9900;
             font-size: 2.5rem;
         }
+
         .review-name {
             font-weight: 600;
             margin-top: 5px;
         }
+
         .review-text {
             font-size: 1.1rem;
             color: #555;
@@ -145,7 +171,7 @@
     </style>
 </head>
 <body>
-    <div class="product-container">
+    <div class="container">
         <img src="S8MaxVUltra_A_Fr.webp" class="product-image" alt="Roborock S8 MaxV Ultra">
         <h1 class="product-title">Roborock S8 MaxV Ultra</h1>
         <p class="product-description">
@@ -154,7 +180,7 @@
         <div class="product-price">799€</div>
         <button class="buy-button" onclick="showForm()">Acheter</button>
 
-        <!-- Formulaire caché initialement -->
+        <!-- Formulaire de Livraison -->
         <div id="delivery-form">
             <h2>Informations de Livraison</h2>
             <form id="delivery-form-container">
@@ -192,7 +218,7 @@
         <!-- Évaluations du produit -->
         <div style="text-align: center; margin-bottom: 30px;">
             <span class="review-stars-large">★★★★★</span>
-            <p style="font-size: 1.5rem; color: #333; font-weight: 600;">4.7</p>
+            <p style="font-size: 1.5rem; font-weight: 600;">4.7</p>
         </div>
 
         <div class="reviews-container">
@@ -202,7 +228,8 @@
                 <div class="review-name">Julie L.</div>
                 <div class="review-text">"Très bon produit, mais un peu lourd à manipuler."</div>
             </div>
-            <!-- Ajoute ici les autres commentaires... -->
+            <div class="separator"></div>
+            <!-- Ajouter d'autres commentaires ici -->
         </div>
     </div>
 
