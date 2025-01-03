@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Information de Livraison</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    /* Style général */
+    body {
+      font-family: 'Arial', sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background-color: #f8f8f8;
+    }
+
+    .container {
+      width: 80%;
+      max-width: 1000px;
+      margin: 50px auto;
+      padding: 20px;
+      background-color: white;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+
+    /* Formulaire */
+    form {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      justify-content: space-between;
+    }
+
+    input, select, textarea {
+      width: 48%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+
+    textarea {
+      width: 100%;
+      height: 150px;
+    }
+
+    button {
+      width: 100%;
+      padding: 15px;
+      background-color: #ff4c4c;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #e44141;
+    }
+
+    .form-section {
+      margin-bottom: 20px;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      input, select, textarea {
+        width: 100%;
+      }
+
+      button {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Conteneur principal -->
+  <div class="container">
+    <h1>Information de Livraison</h1>
+    <form action="process-order.php" method="POST">
+
+      <!-- Section de l'adresse -->
+      <div class="form-section">
+        <h2>Adresse de Livraison</h2>
+        <input type="text" name="nom" placeholder="Nom complet" required>
+        <input type="text" name="adresse" placeholder="Adresse complète" required>
+        <input type="text" name="ville" placeholder="Ville" required>
+        <input type="text" name="code_postal" placeholder="Code postal" required>
+        <select name="pays" required>
+          <option value="">Sélectionner un pays</option>
+          <option value="france">France</option>
+          <option value="maroc">Maroc</option>
+          <option value="algerie">Algérie</option>
+          <!-- Ajouter d'autres pays si nécessaire -->
+        </select>
+      </div>
+
+      <!-- Section des coordonnées -->
+      <div class="form-section">
+        <h2>Coordonnées</h2>
+        <input type="email" name="email" placeholder="Adresse e-mail" required>
+        <input type="tel" name="telephone" placeholder="Numéro de téléphone" required>
+      </div>
+
+      <!-- Section des informations supplémentaires -->
+      <div class="form-section">
+        <h2>Informations supplémentaires</h2>
+        <textarea name="instructions" placeholder="Instructions supplémentaires (facultatif)"></textarea>
+      </div>
+
+      <!-- Bouton de validation -->
+      <button type="submit">Confirmer la commande</button>
+
+    </form>
+  </div>
+
+</body>
+</html>
