@@ -3,13 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Achetez le Roborock S8 MaxV Ultra. Livraison et paiement sécurisé.">
-    <title>Achat Roborock S8 MaxV Ultra</title>
-
-    <!-- Lien vers Google Fonts pour des polices modernes -->
+    <meta name="description" content="Page de création de compte pour achat en ligne">
+    <title>Mes coordonnées - Achat Roborock S8 MaxV Ultra</title>
+    
+    <!-- Lien vers Google Fonts pour les polices modernes -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
-    <!-- Style CSS -->
     <style>
         * {
             margin: 0;
@@ -19,149 +18,100 @@
 
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: #f4f4f4;
+            background-color: #f8f8f8;
             color: #333;
-            line-height: 1.5;
+            line-height: 1.6;
+            padding: 20px;
         }
 
-        /* Conteneur principal */
         .container {
             width: 100%;
-            max-width: 1200px;
+            max-width: 800px;
             margin: 0 auto;
-            padding: 20px;
             background-color: #fff;
             border-radius: 8px;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 30px;
         }
 
         h1 {
             font-size: 1.8rem;
             font-weight: 600;
-            margin-bottom: 20px;
-        }
-
-        h2 {
-            font-size: 1.5rem;
-            color: #555;
-            margin-bottom: 20px;
-        }
-
-        /* Structure de la page (image et détails du produit) */
-        .product-info {
-            display: flex;
+            color: #333;
             margin-bottom: 30px;
         }
 
-        .product-info img {
-            max-width: 300px;
-            border-radius: 8px;
-            margin-right: 20px;
+        /* Section coordonnées */
+        .form-section {
+            margin-bottom: 30px;
         }
 
-        .product-details {
-            flex: 1;
-        }
-
-        .product-price {
-            font-size: 2rem;
-            font-weight: bold;
-            color: #e4393c;
-            margin-bottom: 20px;
-        }
-
-        /* Formulaire */
-        .form-container {
-            margin-top: 30px;
-            background-color: #f9f9f9;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        label {
+        .form-section label {
             display: block;
-            margin-bottom: 8px;
             font-size: 1rem;
+            margin-bottom: 8px;
             font-weight: 600;
         }
 
-        input, select, textarea {
+        .form-section input,
+        .form-section select {
             width: 100%;
-            padding: 10px;
+            padding: 12px;
             margin-bottom: 15px;
             border: 1px solid #ccc;
-            border-radius: 4px;
+            border-radius: 5px;
             font-size: 1rem;
-            background-color: #fff;
         }
 
-        input:focus, select:focus, textarea:focus {
+        .form-section input:focus,
+        .form-section select:focus {
             border-color: #e4393c;
             outline: none;
+        }
+
+        .form-section .radio-group {
+            margin-bottom: 20px;
+        }
+
+        .form-section .radio-group input {
+            margin-right: 10px;
+        }
+
+        .preferences {
+            margin-bottom: 25px;
+        }
+
+        .preferences label {
+            font-size: 1rem;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .preferences input {
+            margin-right: 8px;
         }
 
         .submit-button {
             background-color: #e4393c;
             color: white;
             font-size: 1.2rem;
-            padding: 12px 20px;
+            padding: 14px;
             border: none;
             border-radius: 5px;
             cursor: pointer;
             width: 100%;
             transition: background-color 0.3s;
+            font-weight: 600;
         }
 
         .submit-button:hover {
             background-color: #b92f2a;
         }
 
-        /* Séparation entre les étapes */
-        .step-indicator {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 30px;
-        }
-
-        .step-indicator div {
-            width: 30%;
-            padding: 10px;
-            background-color: #e4393c;
-            color: #fff;
-            text-align: center;
-            font-weight: 600;
-            border-radius: 4px;
-        }
-
-        .step-indicator .completed {
-            background-color: #2dca83;
-        }
-
-        /* Section des avis et notes */
-        .reviews {
-            margin-top: 50px;
-        }
-
-        .review {
-            display: flex;
-            margin-bottom: 20px;
-        }
-
-        .review img {
-            border-radius: 50%;
-            width: 40px;
-            height: 40px;
-            margin-right: 10px;
-        }
-
-        .review-text {
-            font-size: 1rem;
-        }
-
-        .review-stars {
-            color: #ff9900;
-            margin-top: 5px;
+        .info {
+            font-size: 0.9rem;
+            color: #777;
+            margin-top: 10px;
         }
 
     </style>
@@ -169,79 +119,103 @@
 <body>
 
     <div class="container">
-        <!-- Section produit -->
-        <div class="product-info">
-            <img src="S8MaxVUltra_A_Fr.webp" alt="Roborock S8 MaxV Ultra">
-            <div class="product-details">
-                <h1>Roborock S8 MaxV Ultra</h1>
-                <p>Le robot aspirateur intelligent, performant et ultra-efficace pour tous types de sols. Découvrez un nettoyage optimal avec la technologie Reactive AI et une station RockDock®️ Ultra.</p>
-                <div class="product-price">799€</div>
-                <button class="submit-button" onclick="startPurchase()">Acheter maintenant</button>
+        <h1>Mes coordonnées</h1>
+
+        <form id="account-form">
+            <!-- Genre -->
+            <div class="form-section">
+                <label for="gender">Civilité</label>
+                <div class="radio-group">
+                    <input type="radio" id="mr" name="gender" value="mr">
+                    <label for="mr">Monsieur</label>
+                    <input type="radio" id="mme" name="gender" value="mme">
+                    <label for="mme">Madame</label>
+                </div>
             </div>
-        </div>
 
-        <!-- Étapes du processus d'achat -->
-        <div class="step-indicator">
-            <div class="completed">1. Créer un compte</div>
-            <div>2. Informations de livraison</div>
-            <div>3. Paiement</div>
-        </div>
-
-        <!-- Formulaire pour la création de compte -->
-        <div class="form-container" id="account-form">
-            <h2>Créer un compte</h2>
-            <form id="create-account-form">
-                <label for="first-name">Prénom</label>
-                <input type="text" id="first-name" name="first-name" placeholder="Votre prénom" required>
-
+            <!-- Nom -->
+            <div class="form-section">
                 <label for="last-name">Nom</label>
                 <input type="text" id="last-name" name="last-name" placeholder="Votre nom" required>
+            </div>
 
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="Votre email" required>
+            <!-- Prénom -->
+            <div class="form-section">
+                <label for="first-name">Prénom</label>
+                <input type="text" id="first-name" name="first-name" placeholder="Votre prénom" required>
+            </div>
 
-                <label for="phone">Téléphone</label>
-                <input type="tel" id="phone" name="phone" placeholder="Votre numéro" required>
+            <!-- Téléphone mobile -->
+            <div class="form-section">
+                <label for="phone-mobile">Téléphone mobile</label>
+                <input type="tel" id="phone-mobile" name="phone-mobile" placeholder="Votre téléphone mobile" required>
+            </div>
 
-                <button type="submit" class="submit-button">Créer mon compte</button>
-            </form>
-        </div>
+            <!-- Téléphone fixe -->
+            <div class="form-section">
+                <label for="phone-home">Téléphone fixe (optionnel)</label>
+                <input type="tel" id="phone-home" name="phone-home" placeholder="Votre téléphone fixe (optionnel)">
+            </div>
 
-        <!-- Section des avis produits -->
-        <div class="reviews">
-            <h2>Avis clients</h2>
+            <!-- Adresse -->
+            <div class="form-section">
+                <label for="address">Adresse</label>
+                <input type="text" id="address" name="address" placeholder="Votre adresse" required>
+            </div>
 
-            <div class="review">
-                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Avis utilisateur">
+            <!-- Code postal -->
+            <div class="form-section">
+                <label for="postal-code">Code postal</label>
+                <input type="text" id="postal-code" name="postal-code" placeholder="Votre code postal" required>
+            </div>
+
+            <!-- Ville -->
+            <div class="form-section">
+                <label for="city">Ville</label>
+                <input type="text" id="city" name="city" placeholder="Votre ville" required>
+            </div>
+
+            <!-- Complément d'adresse -->
+            <div class="form-section">
+                <label for="address-complement">Complément d'adresse</label>
+                <input type="text" id="address-complement" name="address-complement" placeholder="Complément d'adresse (facultatif)">
+            </div>
+
+            <!-- Préférences de contact -->
+            <div class="preferences">
+                <label>Mes préférences de contact</label>
                 <div>
-                    <div class="review-text">"Très bon produit, l'aspiration est parfaite et la navigation fluide."</div>
-                    <div class="review-stars">★★★★★</div>
+                    <input type="checkbox" id="email-promotion" name="email-promotion">
+                    <label for="email-promotion">Je souhaite recevoir en avant-première les meilleures promotions, nouveautés, conseils personnalisés de Darty par email et sms.</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="personalized-offers" name="personalized-offers">
+                    <label for="personalized-offers">J’accepte que mon profil client soit utilisé pour profiter des offres personnalisées du Groupe Fnac Darty et de ses partenaires.</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="offers" name="offers">
+                    <label for="offers">Je souhaite recevoir les bons plans et offres spéciales du Groupe Fnac Darty et de ses partenaires par email et sms.</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="contact-phone" name="contact-phone">
+                    <label for="contact-phone">Je souhaite être contacté par Darty et ses partenaires pour des offres par téléphone.</label>
                 </div>
             </div>
 
-            <div class="review">
-                <img src="https://randomuser.me/api/portraits/women/22.jpg" alt="Avis utilisateur">
-                <div>
-                    <div class="review-text">"Bon rapport qualité/prix, mais un peu bruyant quand il charge."</div>
-                    <div class="review-stars">★★★★☆</div>
-                </div>
+            <div class="info">
+                En savoir plus sur nos politiques de confidentialité et de communication.
             </div>
-        </div>
 
+            <button type="submit" class="submit-button">Terminer mon achat</button>
+        </form>
     </div>
 
-    <!-- Script JS -->
     <script>
-        function startPurchase() {
-            // Afficher le formulaire de création de compte
-            document.getElementById('account-form').style.display = 'block';
-        }
-
-        // Simuler la soumission du formulaire de création de compte
-        document.getElementById('create-account-form').addEventListener('submit', function (e) {
+        document.getElementById('account-form').addEventListener('submit', function(e) {
             e.preventDefault();
-            alert('Compte créé avec succès ! Vous pouvez maintenant continuer à la livraison.');
+            alert('Formulaire soumis avec succès! Vous allez maintenant pouvoir finaliser votre achat.');
         });
     </script>
+
 </body>
 </html>
