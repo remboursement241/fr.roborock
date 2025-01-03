@@ -4,97 +4,136 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulaire de Contact</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        * {
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f7fc;
+            color: #333;
         }
         header {
-            background-color: #FF5733; /* Rouge-orange */
+            background-color: #1A2B41; /* Bleu foncé */
             color: white;
             text-align: center;
-            padding: 20px 0;
+            padding: 40px 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
         header h1 {
-            margin: 0;
-            font-size: 2rem;
+            font-size: 2.5rem;
+            font-weight: 700;
         }
+
         .promo-banner {
-            background-color: #d1352d; /* Darker red */
+            background-color: #e94e77; /* Rouge moderne */
             color: white;
-            padding: 10px 0;
+            padding: 10px;
+            text-align: center;
             font-size: 1.2rem;
-            font-weight: bold;
-            text-align: center;
+            font-weight: 600;
+            margin-bottom: 20px;
         }
+
         .container {
-            width: 70%;
-            margin: 20px auto;
-            background-color: #fff;
-            padding: 20px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
+            width: 80%;
+            max-width: 900px;
+            margin: 40px auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
         }
+
         h2 {
+            font-size: 1.8rem;
+            color: #1A2B41; /* Bleu foncé */
             text-align: center;
-            color: #FF5733; /* Rouge-orange */
+            margin-bottom: 20px;
+            font-weight: 600;
         }
+
         .form-group {
             margin-bottom: 20px;
         }
+
         .form-group label {
-            display: block;
             font-size: 1rem;
-            margin-bottom: 8px;
-            color: #333;
+            color: #666;
+            font-weight: 500;
         }
+
         .form-group input {
             width: 100%;
-            padding: 10px;
+            padding: 15px;
             font-size: 1rem;
-            border: 1px solid #ddd;
-            border-radius: 4px;
+            border: 2px solid #ddd;
+            border-radius: 6px;
             background-color: #f9f9f9;
+            transition: all 0.3s ease;
         }
+
+        .form-group input:focus {
+            border-color: #1A2B41; /* Bleu foncé */
+            background-color: #fff;
+            outline: none;
+        }
+
         .form-group input[type="submit"] {
-            background-color: #FF5733; /* Rouge-orange */
+            background-color: #e94e77; /* Rouge moderne */
             color: white;
             border: none;
+            font-size: 1.1rem;
             cursor: pointer;
-            font-weight: bold;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
         }
+
         .form-group input[type="submit"]:hover {
-            background-color: #d1352d; /* Darker red */
+            background-color: #d03c65; /* Darker red */
         }
+
         .separator {
             margin: 40px 0;
-            border-top: 1px solid #ddd;
+            border-top: 1px solid #eee;
         }
-        .footer {
+
+        footer {
             text-align: center;
-            background-color: #FF5733; /* Rouge-orange */
+            background-color: #1A2B41; /* Bleu foncé */
             color: white;
-            padding: 10px;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
+            padding: 20px;
         }
-        .footer a {
+
+        footer a {
             color: #fff;
             text-decoration: none;
+            font-weight: 500;
         }
-        .footer a:hover {
+
+        footer a:hover {
             text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                width: 90%;
+            }
+            header h1 {
+                font-size: 2rem;
+            }
         }
     </style>
 </head>
 <body>
+
     <!-- Promo Banner -->
     <div class="promo-banner">
-        Profitez de notre offre exceptionnelle -60% sur tous les produits pour la nouvelle année ! Ne manquez pas cette occasion !
+        **Offre Spéciale** : Profitez de -60% sur tous nos produits pour célébrer la nouvelle année! Ne manquez pas l'occasion!
     </div>
 
     <header>
@@ -102,7 +141,7 @@
     </header>
 
     <div class="container">
-        <h2>Renseignez vos coordonnées dans le formulaire ci-après afin que nous vous redirigions vers le conseiller le plus proche de chez vous</h2>
+        <h2>Renseignez vos informations pour être redirigé vers notre conseiller le plus proche de chez vous.</h2>
         
         <form action="submit_form.php" method="POST">
             <div class="form-group">
@@ -153,8 +192,9 @@
 
     <div class="separator"></div>
 
-    <footer class="footer">
+    <footer>
         <p>&copy; 2025 Roborock. Tous droits réservés. <a href="#">Politique de confidentialité</a> | <a href="#">Conditions d'utilisation</a></p>
     </footer>
+
 </body>
 </html>
