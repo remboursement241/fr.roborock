@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roborock Qrevo Curv - Page Produit</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .product-container {
+            max-width: 1200px;
+            margin: 50px auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .product-image {
+            width: 100%;
+            max-width: 600px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+        }
+        .product-title {
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        .product-description {
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 30px;
+            font-size: 1.1rem;
+        }
+        .product-price {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: red;
+            margin-bottom: 20px;
+        }
+        .buy-button {
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+        .buy-button:hover {
+            background-color: #e44141;
+        }
+        .shipping-companies {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 40px;
+        }
+        .shipping-companies img {
+            width: 80px;
+            height: auto;
+        }
+        .reviews-container {
+            margin-top: 50px;
+            border-top: 1px solid #ddd;
+            padding-top: 30px;
+        }
+        .review {
+            border-bottom: 1px solid #eee;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+        }
+        .review-stars {
+            color: #ff9900;
+            font-size: 1rem;
+            margin-bottom: 10px;
+        }
+        .review-stars-large {
+            color: #ff9900;
+            font-size: 2.5rem; /* Grande étoile pour l'évaluation générale */
+        }
+        .review-name {
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        .review-text {
+            color: #555;
+            font-size: 1rem;
+            margin-top: 10px;
+        }
+        .separator {
+            border-top: 1px solid #eee;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="product-container">
+        <img src="S8MaxVUltra_A_Fr.webp" style="width: 100%; height: auto; border-radius: 10px; margin-bottom: 15px;">
+        <h1 class="product-title">Roborock S8 MaxV Ultra</h1>
+        <p class="product-description">
+            Découvrez la maîtrise inégalée du S8 MaxV Ultra. Il peut gérer les zones difficiles d’accès grâce à sa technologie de nettoyage des bords et des coins. Gagnez en commodité avec la station RockDock®️ Ultra, la reconnaissance d’obstacles Reactive AI 2.0 et l’assistant vocal intelligent intégré. Cet appareil redéfinit votre expérience en vous offrant un foyer impeccable.
+        </p>
+        <div class="product-price">799€</div>
+        <button class="buy-button">Acheter </button>
+
+        <!-- Sociétés de Livraison -->
+        <div class="shipping-companies">
+            <img src="png-transparent-dhl-hd-logo.png" alt="DHL">
+            <img src="Apps-Colissimo-360x236.jpg" alt="Colissimo">
+            <img src="77-773465_fedex-and-ups-logo.png" alt="UPS">
+        </div>
+
+        <div class="separator"></div>
+        
+        <div class="product-container">
+        <!-- Grande étoile de 5 étoiles en haut -->
+        <div style="text-align: center; margin-bottom: 30px;">
+            <span class="review-stars-large">★★★★★</span>
+            <p style="font-size: 1.5rem; color: #333; font-weight: bold;">4.7</p>
+        </div>
+
+        <!-- Commentaires des Clients -->
+        <div class="reviews-container">
+            <h2>Commentaires</h2>
+            
+            <!-- Commentaire 1 -->
+<div class="review">
+    <div class="review-stars">★★★★★</div>
+    <div class="review-name">Sarah B.</div>
+    <div class="review-text">"Produit incroyable! Il a changé ma routine quotidienne." </div>
+</div>
+
+<div class="separator"></div>
+
+<!-- Commentaire 2 -->
+<div class="review">
+    <div class="review-stars">★★★★☆</div>
+    <div class="review-name">Maxime G.</div>
+    <div class="review-text">"Vraiment bon produit, mais je m'attendais à plus de fonctionnalités." </div>
+</div>
+
+<div class="separator"></div>
+
+<!-- Commentaire 3 -->
+<div class="review">
+    <div class="review-stars">★★★★★</div>
+    <div class="review-name">Elena F.</div>
+    <div class="review-text">"Excellent rapport qualité/prix, je suis totalement satisfaite!"</div>
+</div>
+
+<div class="separator"></div>
+
+<!-- Commentaire 4 -->
+<div class="review">
+    <div class="review-stars">★★★★☆</div>
+    <div class="review-name">Hugo M.</div>
+    <div class="review-text">"Bon produit, mais je trouve qu'il est un peu bruyant." </div>
+</div>
+
+<div class="separator"></div>
+
+<!-- Commentaire 5 -->
+<div class="review">
+    <div class="review-stars">★★★☆☆</div>
+    <div class="review-name">Julie T.</div>
+    <div class="review-text">"L'appareil fonctionne bien, mais la durée de la batterie est un peu décevante." </div>
+</div>
+
+<div class="separator"></div>
+
+<!-- Commentaire 6 -->
+<div class="review">
+    <div class="review-stars">★★★★☆</div>
+    <div class="review-name">Nicolas L.</div>
+    <div class="review-text">"Assez satisfait, mais il manque un peu de puissance." </div>
+</div>
+
+<div class="separator"></div>
+
+<!-- Commentaire 7 -->
+<div class="review">
+    <div class="review-stars">★★★★★</div>
+    <div class="review-name">Claire V.</div>
+    <div class="review-text">"Un des meilleurs achats que j'ai faits cette année! Très pratique!" </div>
+</div>
+
+<div class="separator"></div>
+
+<!-- Commentaire 8 -->
+<div class="review">
+    <div class="review-stars">★★★★★</div>
+    <div class="review-name">David P.</div>
+    <div class="review-text">"Super produit, je l'utilise tous les jours et il n'a jamais failli!"</div>
+</div>
+
+<div class="separator"></div>
+
+<!-- Commentaire 9 -->
+<div class="review">
+    <div class="review-stars">★★★★☆</div>
+    <div class="review-name">Isabelle D.</div>
+    <div class="review-text">"Très bonne qualité, mais un peu cher comparé à d'autres modèles." </div>
+</div>
+
+<div class="separator"></div>
+
+<!-- Commentaire 10 -->
+<div class="review">
+    <div class="review-stars">★★★★★</div>
+    <div class="review-name">Arthur R.</div>
+    <div class="review-text">"Produit formidable! Je suis impressionné par la performance!" </div>
+</div>
+
+<div class="separator"></div>
+
+<!-- Commentaire 11 -->
+<div class="review">
+    <div class="review-stars">★★★☆☆</div>
+    <div class="review-name">Léa K.</div>
+    <div class="review-text">"Pas mal, mais il y a quelques améliorations à faire au niveau de la prise en main." </div>
+</div>
+
+<div class="separator"></div>
+
+<!-- Commentaire 12 -->
+<div class="review">
+    <div class="review-stars">★★★★☆</div>
+    <div class="review-name">Vincent B.</div>
+    <div class="review-text">"Un bon produit dans l'ensemble, mais je trouve qu'il manque une option pour les réglages." </div>
+</div>
+
+<div class="separator"></div>
+
+<!-- Commentaire 13 -->
+<div class="review">
+    <div class="review-stars">★★★★★</div>
+    <div class="review-name">Lina S.</div>
+    <div class="review-text">"Je suis absolument ravie! Il est très performant et facile à utiliser!" </div>
+</div>
+
+<div class="separator"></div>
+
+<!-- Commentaire 14 -->
+<div class="review">
+    <div class="review-stars">★★★★☆</div>
+    <div class="review-name">Guillaume F.</div>
+    <div class="review-text">"Un bon produit, mais je m'attendais à une plus grande capacité." </div>
+</div>
+
+<div class="separator"></div>
+
+<!-- Commentaire 15 -->
+<div class="review">
+    <div class="review-stars">★★★★★</div>
+    <div class="review-name">Chloé P.</div>
+    <div class="review-text">"Je ne peux plus m'en passer, un must-have à la maison!" </div>
+</div>
+        </div>
+    </div>
+</body>
+</html>
