@@ -3,19 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="TonNom">
-    <meta name="description" content="Achetez le Roborock S8 MaxV Ultra pour une maison propre et intelligente.">
-    <title>Roborock S8 MaxV Ultra - Achat en ligne</title>
-    
-    <!-- Lien vers Google Fonts -->
+    <meta name="description" content="Achetez le Roborock S8 MaxV Ultra. Livraison et paiement sécurisé.">
+    <title>Achat Roborock S8 MaxV Ultra</title>
+
+    <!-- Lien vers Google Fonts pour des polices modernes -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
-    <!-- Lien vers les icônes font-awesome pour les étoiles et autres éléments -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-
-    <!-- Styles CSS -->
+    <!-- Style CSS -->
     <style>
-        /* RESET CSS */
         * {
             margin: 0;
             padding: 0;
@@ -24,239 +19,229 @@
 
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: #f8f8f8;
+            background-color: #f4f4f4;
             color: #333;
-            line-height: 1.6;
+            line-height: 1.5;
         }
 
-        /* Container principal */
+        /* Conteneur principal */
         .container {
-            max-width: 1200px;
-            margin: 50px auto;
-            background-color: #fff;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        }
-
-        /* Titre du produit */
-        .product-title {
-            font-size: 2rem;
-            font-weight: 600;
-            color: #333;
-            margin-bottom: 20px;
-        }
-
-        /* Image produit */
-        .product-image {
             width: 100%;
-            max-width: 550px;
-            margin-bottom: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
             border-radius: 8px;
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
         }
 
-        /* Prix */
-        .product-price {
-            font-size: 2.5rem;
-            color: #e4393c;
-            font-weight: 700;
-            margin-bottom: 25px;
+        h1 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-bottom: 20px;
         }
 
-        /* Description produit */
-        .product-description {
-            font-size: 1.1rem;
+        h2 {
+            font-size: 1.5rem;
             color: #555;
-            margin-bottom: 25px;
+            margin-bottom: 20px;
         }
 
-        /* Bouton d'achat */
-        .buy-button {
-            background-color: #e4393c;
-            color: #fff;
-            font-size: 1.2rem;
-            padding: 16px 40px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
+        /* Structure de la page (image et détails du produit) */
+        .product-info {
+            display: flex;
+            margin-bottom: 30px;
+        }
+
+        .product-info img {
+            max-width: 300px;
+            border-radius: 8px;
+            margin-right: 20px;
+        }
+
+        .product-details {
+            flex: 1;
+        }
+
+        .product-price {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #e4393c;
+            margin-bottom: 20px;
+        }
+
+        /* Formulaire */
+        .form-container {
+            margin-top: 30px;
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 1rem;
             font-weight: 600;
         }
 
-        .buy-button:hover {
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1rem;
+            background-color: #fff;
+        }
+
+        input:focus, select:focus, textarea:focus {
+            border-color: #e4393c;
+            outline: none;
+        }
+
+        .submit-button {
+            background-color: #e4393c;
+            color: white;
+            font-size: 1.2rem;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            transition: background-color 0.3s;
+        }
+
+        .submit-button:hover {
             background-color: #b92f2a;
         }
 
-        /* Formulaire de livraison */
-        #delivery-form {
-            display: none;
-            background-color: #f9f9f9;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        /* Séparation entre les étapes */
+        .step-indicator {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 30px;
         }
 
-        #delivery-form h2 {
-            font-size: 1.8rem;
-            color: #333;
-            margin-bottom: 20px;
-        }
-
-        #delivery-form label {
-            font-size: 1.1rem;
-            color: #333;
-            margin-bottom: 5px;
-            display: block;
-        }
-
-        #delivery-form input,
-        #delivery-form textarea {
-            width: 100%;
-            padding: 12px;
-            margin-bottom: 15px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            font-size: 1rem;
-            box-sizing: border-box;
-        }
-
-        #delivery-form button {
-            background-color: #2dca83;
-            color: white;
-            padding: 14px 30px;
-            border: none;
-            font-size: 1.2rem;
+        .step-indicator div {
+            width: 30%;
+            padding: 10px;
+            background-color: #e4393c;
+            color: #fff;
+            text-align: center;
             font-weight: 600;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
+            border-radius: 4px;
         }
 
-        #delivery-form button:hover {
-            background-color: #259f6e;
+        .step-indicator .completed {
+            background-color: #2dca83;
         }
 
-        /* Avis */
-        .reviews-container {
+        /* Section des avis et notes */
+        .reviews {
             margin-top: 50px;
         }
 
         .review {
-            margin-bottom: 25px;
+            display: flex;
+            margin-bottom: 20px;
         }
 
-        .review-stars {
-            color: #ff9900;
-            font-size: 1.2rem;
-        }
-
-        .review-name {
-            font-weight: 600;
-            color: #333;
-            font-size: 1.1rem;
+        .review img {
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
         }
 
         .review-text {
             font-size: 1rem;
-            color: #555;
+        }
+
+        .review-stars {
+            color: #ff9900;
             margin-top: 5px;
         }
 
-        /* Séparateur */
-        .separator {
-            margin: 30px 0;
-            border-top: 1px solid #ddd;
-        }
-
-        /* Sociétés de livraison */
-        .shipping-companies {
-            display: flex;
-            justify-content: space-between;
-            max-width: 400px;
-            margin: 20px auto;
-        }
-
-        .shipping-companies img {
-            width: 90px;
-            height: auto;
-        }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <!-- Image produit -->
-        <img src="S8MaxVUltra_A_Fr.webp" class="product-image" alt="Roborock S8 MaxV Ultra">
+        <!-- Section produit -->
+        <div class="product-info">
+            <img src="S8MaxVUltra_A_Fr.webp" alt="Roborock S8 MaxV Ultra">
+            <div class="product-details">
+                <h1>Roborock S8 MaxV Ultra</h1>
+                <p>Le robot aspirateur intelligent, performant et ultra-efficace pour tous types de sols. Découvrez un nettoyage optimal avec la technologie Reactive AI et une station RockDock®️ Ultra.</p>
+                <div class="product-price">799€</div>
+                <button class="submit-button" onclick="startPurchase()">Acheter maintenant</button>
+            </div>
+        </div>
 
-        <!-- Titre du produit -->
-        <h1 class="product-title">Roborock S8 MaxV Ultra</h1>
+        <!-- Étapes du processus d'achat -->
+        <div class="step-indicator">
+            <div class="completed">1. Créer un compte</div>
+            <div>2. Informations de livraison</div>
+            <div>3. Paiement</div>
+        </div>
 
-        <!-- Description -->
-        <p class="product-description">
-            Découvrez la maîtrise inégalée du S8 MaxV Ultra. Grâce à sa technologie de nettoyage des bords et des coins, il s'adapte aux zones difficiles. Profitez de sa station RockDock®️ Ultra, de la reconnaissance d'obstacles Reactive AI 2.0 et de l'assistant vocal intelligent intégré pour une expérience optimale.
-        </p>
+        <!-- Formulaire pour la création de compte -->
+        <div class="form-container" id="account-form">
+            <h2>Créer un compte</h2>
+            <form id="create-account-form">
+                <label for="first-name">Prénom</label>
+                <input type="text" id="first-name" name="first-name" placeholder="Votre prénom" required>
 
-        <!-- Prix -->
-        <div class="product-price">799€</div>
+                <label for="last-name">Nom</label>
+                <input type="text" id="last-name" name="last-name" placeholder="Votre nom" required>
 
-        <!-- Bouton d'achat -->
-        <button class="buy-button" onclick="showForm()">Acheter</button>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Votre email" required>
 
-        <!-- Formulaire de livraison (initialement caché) -->
-        <div id="delivery-form">
-            <h2>Informations de Livraison</h2>
-            <form id="delivery-form-container">
-                <label for="full-name">Nom complet</label>
-                <input type="text" id="full-name" name="full-name" required>
+                <label for="phone">Téléphone</label>
+                <input type="tel" id="phone" name="phone" placeholder="Votre numéro" required>
 
-                <label for="address">Adresse</label>
-                <input type="text" id="address" name="address" required>
-
-                <label for="city">Ville</label>
-                <input type="text" id="city" name="city" required>
-
-                <label for="postal-code">Code postal</label>
-                <input type="text" id="postal-code" name="postal-code" required>
-
-                <label for="phone">Numéro de téléphone</label>
-                <input type="tel" id="phone" name="phone" required>
-
-                <label for="notes">Commentaires supplémentaires</label>
-                <textarea id="notes" name="notes"></textarea>
-
-                <button type="submit">Valider la commande</button>
+                <button type="submit" class="submit-button">Créer mon compte</button>
             </form>
         </div>
 
-        <!-- Sociétés de livraison -->
-        <div class="shipping-companies">
-            <img src="png-transparent-dhl-hd-logo.png" alt="DHL">
-            <img src="Apps-Colissimo-360x236.jpg" alt="Colissimo">
-            <img src="77-773465_fedex-and-ups-logo.png" alt="UPS">
+        <!-- Section des avis produits -->
+        <div class="reviews">
+            <h2>Avis clients</h2>
+
+            <div class="review">
+                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Avis utilisateur">
+                <div>
+                    <div class="review-text">"Très bon produit, l'aspiration est parfaite et la navigation fluide."</div>
+                    <div class="review-stars">★★★★★</div>
+                </div>
+            </div>
+
+            <div class="review">
+                <img src="https://randomuser.me/api/portraits/women/22.jpg" alt="Avis utilisateur">
+                <div>
+                    <div class="review-text">"Bon rapport qualité/prix, mais un peu bruyant quand il charge."</div>
+                    <div class="review-stars">★★★★☆</div>
+                </div>
+            </div>
         </div>
 
-        <!-- Avis clients -->
-        <div class="reviews-container">
-            <div class="review">
-                <div class="review-stars">★★★★★</div>
-                <div class="review-name">Julie L.</div>
-                <div class="review-text">"Très bon produit, je suis satisfaite de la performance." </div>
-            </div>
-            <div class="review">
-                <div class="review-stars">★★★★☆</div>
-                <div class="review-name">Jean P.</div>
-                <div class="review-text">"L'aspirateur est efficace, mais un peu bruyant." </div>
-            </div>
-        </div>
     </div>
 
+    <!-- Script JS -->
     <script>
-        function showForm() {
-            const form = document.getElementById('delivery-form');
-            form.style.display = (form.style.display === 'none' || form.style.display === '') ? 'block' : 'none';
+        function startPurchase() {
+            // Afficher le formulaire de création de compte
+            document.getElementById('account-form').style.display = 'block';
         }
-    </script>
 
+        // Simuler la soumission du formulaire de création de compte
+        document.getElementById('create-account-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+            alert('Compte créé avec succès ! Vous pouvez maintenant continuer à la livraison.');
+        });
+    </script>
 </body>
 </html>
