@@ -3,129 +3,144 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Roborock Qrevo Curv - Page Produit</title>
+    <title>Roborock S8 MaxV Ultra - Achat en ligne</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            font-family: 'Poppins', sans-serif;
+            background-color: #f7f7f7;
             margin: 0;
             padding: 0;
         }
         .product-container {
+            width: 100%;
             max-width: 1200px;
             margin: 50px auto;
-            background-color: white;
-            padding: 30px;
+            background-color: #fff;
             border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            padding: 40px;
         }
         .product-image {
             width: 100%;
             max-width: 600px;
-            margin-bottom: 20px;
+            margin: 0 auto;
+            display: block;
             border-radius: 10px;
+            margin-bottom: 30px;
         }
         .product-title {
-            font-size: 2.5rem;
+            font-size: 2rem;
             color: #333;
-            margin-bottom: 10px;
-            font-weight: bold;
+            font-weight: 600;
+            margin-bottom: 20px;
         }
         .product-description {
-            color: #555;
-            line-height: 1.8;
+            color: #666;
+            line-height: 1.7;
             margin-bottom: 30px;
             font-size: 1.1rem;
         }
         .product-price {
-            font-size: 1.8rem;
-            font-weight: bold;
-            color: red;
+            font-size: 2rem;
+            font-weight: 700;
+            color: #e4393c;
             margin-bottom: 20px;
         }
         .buy-button {
-            background-color: red;
+            background-color: #e4393c;
             color: white;
             border: none;
-            padding: 15px 30px;
-            border-radius: 5px;
+            padding: 16px 40px;
             font-size: 1.2rem;
             cursor: pointer;
-            font-weight: bold;
-            transition: background-color 0.3s ease;
+            font-weight: 600;
+            border-radius: 5px;
+            transition: all 0.3s ease;
         }
         .buy-button:hover {
-            background-color: #e44141;
+            background-color: #b92f2a;
         }
-        .shipping-companies {
-            display: flex;
-            justify-content: space-around;
-            margin-top: 40px;
-        }
-        .shipping-companies img {
-            width: 80px;
-            height: auto;
-        }
-        .reviews-container {
-            margin-top: 50px;
-            border-top: 1px solid #ddd;
-            padding-top: 30px;
-        }
-        .review {
-            border-bottom: 1px solid #eee;
-            padding-bottom: 15px;
-            margin-bottom: 20px;
-        }
-        .review-stars {
-            color: #ff9900;
-            font-size: 1rem;
-            margin-bottom: 10px;
-        }
-        .review-stars-large {
-            color: #ff9900;
-            font-size: 2.5rem; /* Grande étoile pour l'évaluation générale */
-        }
-        .review-name {
-            font-weight: bold;
-            font-size: 1.2rem;
-        }
-        .review-text {
-            color: #555;
-            font-size: 1rem;
-            margin-top: 10px;
-        }
-        .separator {
-            border-top: 1px solid #eee;
-            margin: 20px 0;
-        }
-        /* Formulaire de livraison */
+
+        /* Style Formulaire */
         #delivery-form {
             display: none;
             margin-top: 30px;
-            padding: 20px;
+            padding: 30px;
             background-color: #f9f9f9;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease-in-out;
+        }
+        #delivery-form h2 {
+            font-size: 1.8rem;
+            color: #333;
+            margin-bottom: 20px;
+            font-weight: 600;
         }
         #delivery-form input, #delivery-form textarea {
             width: 100%;
-            padding: 10px;
+            padding: 12px 18px;
             margin: 10px 0;
             border: 1px solid #ccc;
             border-radius: 5px;
+            font-size: 1rem;
+            background-color: #fff;
+            box-sizing: border-box;
+        }
+        #delivery-form input:focus, #delivery-form textarea:focus {
+            border-color: #e4393c;
+            outline: none;
         }
         #delivery-form button {
-            background-color: green;
+            background-color: #2dca83;
             color: white;
-            padding: 10px 20px;
+            padding: 14px 30px;
             border: none;
+            font-size: 1.2rem;
+            font-weight: 600;
             border-radius: 5px;
             cursor: pointer;
-            font-size: 1.2rem;
-            font-weight: bold;
+            transition: background-color 0.3s ease;
         }
         #delivery-form button:hover {
-            background-color: #4CAF50;
+            background-color: #259f6e;
+        }
+
+        /* Sociétés de Livraison */
+        .shipping-companies {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        .shipping-companies img {
+            width: 100px;
+            height: auto;
+        }
+
+        /* Avis des clients */
+        .review-stars {
+            color: #ff9900;
+        }
+        .review-stars-large {
+            color: #ff9900;
+            font-size: 2.5rem;
+        }
+        .review-name {
+            font-weight: 600;
+            margin-top: 5px;
+        }
+        .review-text {
+            font-size: 1.1rem;
+            color: #555;
+            margin-top: 10px;
+        }
+
+        .separator {
+            margin: 30px 0;
+            border-top: 1px solid #ddd;
         }
     </style>
 </head>
@@ -134,17 +149,15 @@
         <img src="S8MaxVUltra_A_Fr.webp" class="product-image" alt="Roborock S8 MaxV Ultra">
         <h1 class="product-title">Roborock S8 MaxV Ultra</h1>
         <p class="product-description">
-            Découvrez la maîtrise inégalée du S8 MaxV Ultra. Il peut gérer les zones difficiles d’accès grâce à sa technologie de nettoyage des bords et des coins. Gagnez en commodité avec la station RockDock®️ Ultra, la reconnaissance d’obstacles Reactive AI 2.0 et l’assistant vocal intelligent intégré. Cet appareil redéfinit votre expérience en vous offrant un foyer impeccable.
+            Découvrez la maîtrise inégalée du S8 MaxV Ultra. Il peut gérer les zones difficiles d’accès grâce à sa technologie de nettoyage des bords et des coins. Gagnez en commodité avec la station RockDock®️ Ultra, la reconnaissance d’obstacles Reactive AI 2.0 et l’assistant vocal intelligent intégré.
         </p>
         <div class="product-price">799€</div>
-
-        <!-- Bouton pour afficher le formulaire -->
         <button class="buy-button" onclick="showForm()">Acheter</button>
 
         <!-- Formulaire caché initialement -->
         <div id="delivery-form">
             <h2>Informations de Livraison</h2>
-            <form>
+            <form id="delivery-form-container">
                 <label for="full-name">Nom complet</label>
                 <input type="text" id="full-name" name="full-name" required>
 
@@ -179,7 +192,7 @@
         <!-- Évaluations du produit -->
         <div style="text-align: center; margin-bottom: 30px;">
             <span class="review-stars-large">★★★★★</span>
-            <p style="font-size: 1.5rem; color: #333; font-weight: bold;">4.7</p>
+            <p style="font-size: 1.5rem; color: #333; font-weight: 600;">4.7</p>
         </div>
 
         <div class="reviews-container">
@@ -195,7 +208,7 @@
 
     <script>
         function showForm() {
-            var form = document.getElementById('delivery-form');
+            const form = document.getElementById('delivery-form');
             form.style.display = (form.style.display === 'none' || form.style.display === '') ? 'block' : 'none';
         }
     </script>
