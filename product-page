@@ -102,10 +102,10 @@
 </head>
 <body>
     <div class="product-container">
-        <img src="S8MaxVUltra_A_Fr.webp" style="width: 100%; height: auto; border-radius: 10px; margin-bottom: 15px;">
-        <h1 class="product-title">Roborock S8 MaxV Ultra</h1>
+        <img src="roborock-qrevo-curv-a-1.webp" class="product-image" alt="Roborock Qrevo Curv">
+        <h1 class="product-title">Aspirateur robot Roborock Qrevo Curv</h1>
         <p class="product-description">
-            Découvrez la maîtrise inégalée du S8 MaxV Ultra. Il peut gérer les zones difficiles d’accès grâce à sa technologie de nettoyage des bords et des coins. Gagnez en commodité avec la station RockDock®️ Ultra, la reconnaissance d’obstacles Reactive AI 2.0 et l’assistant vocal intelligent intégré. Cet appareil redéfinit votre expérience en vous offrant un foyer impeccable.
+            Découvrez le Roborock Qrevo Curv, un aspirateur robot alliant élégance et technologie de pointe. Son système anti-enchevêtrement double et son châssis AdaptiLift™ offrent des performances exceptionnelles, tout en s’adaptant aux différents types de sols. Grâce à sa puissance d'aspiration HyperForce® de 18 500 Pa et à sa technologie FlexiArm™, il atteint tous les recoins de votre maison pour un nettoyage impeccable.
         </p>
         <div class="product-price">799€</div>
         <button class="buy-button">Acheter </button>
@@ -130,38 +130,37 @@
         <div class="reviews-container">
             <h2>Commentaires</h2>
             
-            <!-- Commentaire 1 -->
-<div class="review">
-    <div class="review-stars">★★★★★</div>
-    <div class="review-name">Sarah B.</div>
-    <div class="review-text">"Produit incroyable! Il a changé ma routine quotidienne." </div>
+            <div class="review">
+    <div class="review-stars">★★★★☆</div>
+    <div class="review-name">Julie L.</div>
+    <div class="review-text">"Très bon produit, mais un peu lourd à manipuler." </div>
 </div>
 
 <div class="separator"></div>
 
 <!-- Commentaire 2 -->
 <div class="review">
-    <div class="review-stars">★★★★☆</div>
-    <div class="review-name">Maxime G.</div>
-    <div class="review-text">"Vraiment bon produit, mais je m'attendais à plus de fonctionnalités." </div>
+    <div class="review-stars">★★★★★</div>
+    <div class="review-name">Thierry C.</div>
+    <div class="review-text">"Excellent, je l'utilise tous les jours. Je le recommande vivement!"</div>
 </div>
 
 <div class="separator"></div>
 
 <!-- Commentaire 3 -->
 <div class="review">
-    <div class="review-stars">★★★★★</div>
-    <div class="review-name">Elena F.</div>
-    <div class="review-text">"Excellent rapport qualité/prix, je suis totalement satisfaite!"</div>
+    <div class="review-stars">★★★★☆</div>
+    <div class="review-name">Charlotte D.</div>
+    <div class="review-text">"Bon rapport qualité/prix, mais quelques améliorations seraient nécessaires." </div>
 </div>
 
 <div class="separator"></div>
 
 <!-- Commentaire 4 -->
 <div class="review">
-    <div class="review-stars">★★★★☆</div>
-    <div class="review-name">Hugo M.</div>
-    <div class="review-text">"Bon produit, mais je trouve qu'il est un peu bruyant." </div>
+    <div class="review-stars">★★★★★</div>
+    <div class="review-name">Pierre B.</div>
+    <div class="review-text">"Un des meilleurs produits que j'ai achetés récemment!"</div>
 </div>
 
 <div class="separator"></div>
@@ -169,26 +168,26 @@
 <!-- Commentaire 5 -->
 <div class="review">
     <div class="review-stars">★★★☆☆</div>
-    <div class="review-name">Julie T.</div>
-    <div class="review-text">"L'appareil fonctionne bien, mais la durée de la batterie est un peu décevante." </div>
+    <div class="review-name">Amandine M.</div>
+    <div class="review-text">"Plutôt satisfait, mais il y a des problèmes de batterie." </div>
 </div>
 
 <div class="separator"></div>
 
 <!-- Commentaire 6 -->
 <div class="review">
-    <div class="review-stars">★★★★☆</div>
-    <div class="review-name">Nicolas L.</div>
-    <div class="review-text">"Assez satisfait, mais il manque un peu de puissance." </div>
+    <div class="review-stars">★★★★★</div>
+    <div class="review-name">Julien V.</div>
+    <div class="review-text">"Très pratique, je l'utilise tous les jours. Ne m'a jamais déçu!" </div>
 </div>
 
 <div class="separator"></div>
 
 <!-- Commentaire 7 -->
 <div class="review">
-    <div class="review-stars">★★★★★</div>
-    <div class="review-name">Claire V.</div>
-    <div class="review-text">"Un des meilleurs achats que j'ai faits cette année! Très pratique!" </div>
+    <div class="review-stars">★★★★☆</div>
+    <div class="review-name">Céline F.</div>
+    <div class="review-text">"Très bon produit, mais un peu trop bruyant pour mon goût." </div>
 </div>
 
 <div class="separator"></div>
@@ -196,8 +195,8 @@
 <!-- Commentaire 8 -->
 <div class="review">
     <div class="review-stars">★★★★★</div>
-    <div class="review-name">David P.</div>
-    <div class="review-text">"Super produit, je l'utilise tous les jours et il n'a jamais failli!"</div>
+    <div class="review-name">Nicolas P.</div>
+    <div class="review-text">"Impressionnant, fonctionne parfaitement dans toutes les situations!" </div>
 </div>
 
 <div class="separator"></div>
@@ -205,8 +204,8 @@
 <!-- Commentaire 9 -->
 <div class="review">
     <div class="review-stars">★★★★☆</div>
-    <div class="review-name">Isabelle D.</div>
-    <div class="review-text">"Très bonne qualité, mais un peu cher comparé à d'autres modèles." </div>
+    <div class="review-name">Emilie L.</div>
+    <div class="review-text">"Très bonne qualité, mais la prise en main pourrait être améliorée." </div>
 </div>
 
 <div class="separator"></div>
@@ -214,8 +213,8 @@
 <!-- Commentaire 10 -->
 <div class="review">
     <div class="review-stars">★★★★★</div>
-    <div class="review-name">Arthur R.</div>
-    <div class="review-text">"Produit formidable! Je suis impressionné par la performance!" </div>
+    <div class="review-name">Frédéric S.</div>
+    <div class="review-text">"Un excellent achat, je ne regrette pas du tout!" </div>
 </div>
 
 <div class="separator"></div>
@@ -223,8 +222,8 @@
 <!-- Commentaire 11 -->
 <div class="review">
     <div class="review-stars">★★★☆☆</div>
-    <div class="review-name">Léa K.</div>
-    <div class="review-text">"Pas mal, mais il y a quelques améliorations à faire au niveau de la prise en main." </div>
+    <div class="review-name">Sophie H.</div>
+    <div class="review-text">"Un peu déçue par la qualité, mais ça reste fonctionnel." </div>
 </div>
 
 <div class="separator"></div>
@@ -232,8 +231,8 @@
 <!-- Commentaire 12 -->
 <div class="review">
     <div class="review-stars">★★★★☆</div>
-    <div class="review-name">Vincent B.</div>
-    <div class="review-text">"Un bon produit dans l'ensemble, mais je trouve qu'il manque une option pour les réglages." </div>
+    <div class="review-name">Marc J.</div>
+    <div class="review-text">"Très bon produit, mais j'aimerais une meilleure autonomie." </div>
 </div>
 
 <div class="separator"></div>
@@ -241,8 +240,8 @@
 <!-- Commentaire 13 -->
 <div class="review">
     <div class="review-stars">★★★★★</div>
-    <div class="review-name">Lina S.</div>
-    <div class="review-text">"Je suis absolument ravie! Il est très performant et facile à utiliser!" </div>
+    <div class="review-name">Sophie C.</div>
+    <div class="review-text">"Produit fantastique! Facile à utiliser et très efficace." </div>
 </div>
 
 <div class="separator"></div>
@@ -250,8 +249,8 @@
 <!-- Commentaire 14 -->
 <div class="review">
     <div class="review-stars">★★★★☆</div>
-    <div class="review-name">Guillaume F.</div>
-    <div class="review-text">"Un bon produit, mais je m'attendais à une plus grande capacité." </div>
+    <div class="review-name">Antoine P.</div>
+    <div class="review-text">"Un bon produit dans l'ensemble, mais un peu plus de puissance serait idéale." </div>
 </div>
 
 <div class="separator"></div>
@@ -259,8 +258,8 @@
 <!-- Commentaire 15 -->
 <div class="review">
     <div class="review-stars">★★★★★</div>
-    <div class="review-name">Chloé P.</div>
-    <div class="review-text">"Je ne peux plus m'en passer, un must-have à la maison!" </div>
+    <div class="review-name">Laura G.</div>
+    <div class="review-text">"Parfait! Je l'utilise chaque jour et il fait un travail impeccable!" </div>
 </div>
         </div>
     </div>
