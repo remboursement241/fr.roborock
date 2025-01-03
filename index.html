@@ -377,24 +377,114 @@
 </div>
   </div>
 
-  <!-- تخفيضات رأس السنة -->
-<div style="
-    background: linear-gradient(135deg, #ff5f6d, #ffc3a0); 
-    color: white; 
-    padding: 20px 30px; 
-    border-radius: 15px; 
-    font-size: 1.2rem; 
-    font-weight: 600; 
-    margin-bottom: 25px; 
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); 
-    text-align: center;
-    max-width: 90%;
-    margin-left: auto; 
-    margin-right: auto;">
-    🎉 <strong>Célébrez la Nouvelle Année avec style !</strong> 🎉 <br>
-    Profitez de <strong>jusqu'à -60% de réduction</strong> sur nos produits et offrez à votre maison un nettoyage en profondeur pour démarrer 2025 sur une note parfaite !
-</div>
+ <!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>شعبيات رأس السنة</title>
+    <style>
+        /* Effet de neige */
+        .snowflakes {
+            position: fixed;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            z-index: 9999;
+        }
 
+        .snowflake {
+            position: absolute;
+            top: -10px;
+            color: #fff;
+            font-size: 1.5rem;
+            user-select: none;
+            animation: snow 10s linear infinite;
+        }
+
+        @keyframes snow {
+            0% {
+                transform: translateY(-10px) rotate(0deg);
+            }
+            100% {
+                transform: translateY(100vh) rotate(360deg);
+            }
+        }
+
+        /* Style pour la boîte promotionnelle */
+        .promo-box {
+            background: linear-gradient(135deg, #ff5f6d, #ffc3a0);
+            color: white;
+            padding: 20px 30px;
+            border-radius: 15px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 25px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Style pour le compte à rebours */
+        .countdown {
+            font-size: 1.5rem;
+            margin-top: 15px;
+            font-weight: 700;
+            color: #ffcc00;
+        }
+    </style>
+</head>
+<body>
+    <!-- Effet de neige -->
+    <div class="snowflakes" aria-hidden="true">
+        <span class="snowflake">❄️</span>
+        <span class="snowflake">❄️</span>
+        <span class="snowflake">❄️</span>
+        <span class="snowflake">❄️</span>
+        <span class="snowflake">❄️</span>
+        <span class="snowflake">❄️</span>
+        <span class="snowflake">❄️</span>
+    </div>
+
+    <!-- Boîte de promotion -->
+    <div class="promo-box">
+        🎉 <strong>احتفل برأس السنة الجديدة بأناقة!</strong> 🎉 <br>
+        استفد من <strong>حتى -60% من التخفيض</strong> على منتجاتنا وقدم لمنزلك تنظيفًا عميقًا للبدء في 2025 بملاحظة بارفيتي!
+        <div class="countdown" id="countdown"></div>
+    </div>
+
+    <script>
+        // Fonction pour démarrer le compte à rebours
+        function startCountdown(endTime) {
+            const countdownElement = document.getElementById('countdown');
+            const timer = setInterval(function () {
+                const now = new Date().getTime();
+                const timeLeft = endTime - now;
+
+                const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+                countdownElement.innerHTML = `${hours}h ${minutes}m ${seconds}s`;
+
+                if (timeLeft <= 0) {
+                    clearInterval(timer);
+                    countdownElement.innerHTML = "انتهت العروض!";
+                }
+            }, 1000);
+        }
+
+        // Définir l'heure de fin (12 heures à partir de maintenant)
+        const now = new Date().getTime();
+        const twelveHoursLater = now + 12 * 60 * 60 * 1000;
+
+        // Démarrer le compte à rebours
+        startCountdown(twelveHoursLater);
+    </script>
+</body>
+</div>
 
   </script>
   <!-- Features Section -->
