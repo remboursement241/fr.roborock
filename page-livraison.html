@@ -3,10 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Produit - Livraison</title>
+    <title>Page Livraison</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
     <style>
-        /* التنسيقات */
         * {
             margin: 0;
             padding: 0;
@@ -17,9 +16,17 @@
             background-color: #f4f7fc;
             color: #333;
         }
+        header {
+            text-align: center;
+            background-color: #1A2B41;
+            color: white;
+            padding: 20px;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
         .product-details {
             text-align: center;
-            margin: 20px 0;
+            margin: 30px 0;
         }
         .product-details img {
             max-width: 80%;
@@ -50,112 +57,120 @@
         .container {
             width: 80%;
             max-width: 900px;
-            margin: 40px auto;
+            margin: 20px auto;
             background-color: white;
-            padding: 30px;
+            padding: 20px;
             border-radius: 15px;
             box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
         }
         .form-group {
-            margin-bottom: 25px;
+            margin-bottom: 20px;
         }
         .form-group label {
             font-size: 1rem;
-            color: #666;
-            margin-bottom: 8px;
+            color: #555;
             display: block;
+            margin-bottom: 5px;
         }
         .form-group input {
             width: 100%;
-            padding: 15px;
+            padding: 10px;
             font-size: 1rem;
-            border: 2px solid #ddd;
-            border-radius: 8px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
             background-color: #f9f9f9;
         }
         .form-group input:focus {
             border-color: #1A2B41;
-            background-color: #fff;
             outline: none;
         }
         .form-group input[type="submit"] {
             background-color: #e94e77;
             color: white;
             border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
             font-size: 1.1rem;
-            padding: 15px;
-            border-radius: 8px;
+            font-weight: bold;
             cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .form-group input[type="submit"]:hover {
+            background-color: #d03c65;
         }
         footer {
             text-align: center;
             background-color: #1A2B41;
             color: white;
-            padding: 20px;
+            padding: 10px;
             font-size: 0.9rem;
         }
     </style>
 </head>
 <body>
 
-    <!-- عرض تفاصيل المنتج -->
-    <div class="product-details">
-        <img id="product-image" src="" alt="Produit">
-        <h1 id="product-name"></h1>
-        <p id="product-price"></p>
-    </div>
+<header>
+    Produit
+</header>
 
-    <!-- رسالة التخفيض -->
-    <div class="promo-banner">
-        🎉 Nouvelle Année : Profitez des Soldes jusqu'à -60% pour une maison plus propre en 2025 !
-    </div>
+<!-- تفاصيل المنتج -->
+<div class="product-details">
+    <img id="product-image" src="" alt="Produit">
+    <h1 id="product-name"></h1>
+    <p id="product-price"></p>
+</div>
 
-    <!-- استمارة المعلومات -->
-    <div class="container">
-        <form action="submit_form.php" method="POST">
-            <div class="form-group">
-                <label for="prenom">Prénom *</label>
-                <input type="text" id="prenom" name="prenom" required placeholder="Entrez votre prénom">
-            </div>
-            <div class="form-group">
-                <label for="nom">Nom *</label>
-                <input type="text" id="nom" name="nom" required placeholder="Entrez votre nom">
-            </div>
-            <div class="form-group">
-                <label for="rue">Rue *</label>
-                <input type="text" id="rue" name="rue" required placeholder="Entrez votre rue">
-            </div>
-            <div class="form-group">
-                <label for="code_postal">Code postal *</label>
-                <input type="text" id="code_postal" name="code_postal" required placeholder="Entrez votre code postal">
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Finaliser votre panier">
-            </div>
-        </form>
-    </div>
+<!-- رسالة التخفيض -->
+<div class="promo-banner">
+    🎉 Nouvelle Année : Profitez des Soldes jusqu'à -60% pour une maison plus propre en 2025 !
+</div>
 
-    <footer>
-        <p>&copy; 2025 Roborock. Tous droits réservés.</p>
-    </footer>
+<!-- استمارة ملء البيانات -->
+<div class="container">
+    <form action="submit_form.php" method="POST">
+        <div class="form-group">
+            <label for="prenom">Prénom *</label>
+            <input type="text" id="prenom" name="prenom" required placeholder="Entrez votre prénom">
+        </div>
+        <div class="form-group">
+            <label for="nom">Nom *</label>
+            <input type="text" id="nom" name="nom" required placeholder="Entrez votre nom">
+        </div>
+        <div class="form-group">
+            <label for="rue">Rue *</label>
+            <input type="text" id="rue" name="rue" required placeholder="Entrez votre rue">
+        </div>
+        <div class="form-group">
+            <label for="code_postal">Code Postal *</label>
+            <input type="text" id="code_postal" name="code_postal" required placeholder="Entrez votre code postal">
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Finaliser votre panier">
+        </div>
+    </form>
+</div>
 
-    <!-- استخراج البيانات وعرضها -->
-    <script>
-        // استخراج البيانات من الرابط
-        const params = new URLSearchParams(window.location.search);
-        const productName = params.get("name");
-        const productPrice = params.get("price");
-        const productImage = params.get("image");
+<footer>
+    &copy; 2025 Roborock. Tous droits réservés.
+</footer>
 
-        // التحقق من البيانات
-        if (productName && productPrice && productImage) {
-            document.getElementById("product-name").textContent = productName;
-            document.getElementById("product-price").textContent = Prix: ${productPrice} €;
-            document.getElementById("product-image").src = productImage;
-        } else {
-            console.error("Données du produit manquantes !");
-        }
-    </script>
+<!-- JavaScript لاستخراج وعرض البيانات -->
+<script>
+    // استخراج البيانات من الرابط
+    const params = new URLSearchParams(window.location.search);
+    const productName = params.get("name");
+    const productPrice = params.get("price");
+    const productImage = params.get("image");
+
+    // عرض تفاصيل المنتج
+    if (productName && productPrice && productImage) {
+        document.getElementById("product-name").textContent = productName;
+        document.getElementById("product-price").textContent = Prix: ${productPrice} €;
+        document.getElementById("product-image").src = productImage;
+    } else {
+        console.error("Données du produit manquantes !");
+    }
+</script>
 
 </body>
 </html>
