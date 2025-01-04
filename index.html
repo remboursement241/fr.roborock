@@ -446,6 +446,25 @@
         <span class="snowflake">❄️</span>
         <span class="snowflake">❄️</span>
         <span class="snowflake">❄️</span>
+<span class="snowflake">❄️</span>
+        <span class="snowflake">❄️</span>
+        <span class="snowflake">❄️</span>
+        <span class="snowflake">❄️</span>
+        <span class="snowflake">❄️</span>
+        <span class="snowflake">❄️</span>
+        <span class="snowflake">❄️</span><span class="snowflake">❄️</span>
+        <span class="snowflake">❄️</span>
+        <span class="snowflake">❄️</span>
+        <span class="snowflake">❄️</span>
+        <span class="snowflake">❄️</span>
+        <span class="snowflake">❄️</span>
+        <span class="snowflake">❄️</span><span class="snowflake">❄️</span>
+        <span class="snowflake">❄️</span>
+        <span class="snowflake">❄️</span>
+        <span class="snowflake">❄️</span>
+        <span class="snowflake">❄️</span>
+        <span class="snowflake">❄️</span>
+        <span class="snowflake">❄️</span>
     </div>
 
 <!-- Boîte de Promotion -->
@@ -484,171 +503,72 @@
 
   </script>
   <!-- Features Section -->
-  <div id="product-list">
-        <div class="product">
-            <h3>Roborock S8 MaxV Ultra</h3>
-            <img src="S8MaxVUltra_A_Fr.webp" alt="Roborock S8" style="width: 200px; height: auto;">
-            <p>Prix: <span>799</span> €</p>
-            <button onclick="showCustomerForm('Roborock S8 MaxV Ultra', '799', 'S8MaxVUltra_A_Fr.webp')">Acheter Maintenant</button>
+  <section id="our-features" class="features">
+<div class="container">
+<!-- تخفيضات رأس السنة -->
+            <div style="
+                background: linear-gradient(45deg, #00C6FF, #0072FF);
+                color: white;
+                padding: 15px;
+                border-radius: 10px;
+                font-size: 1rem;
+                font-weight: bold;
+                margin-bottom: 20px;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+                Our features
+            </div>  <div class="feature-container">
+    <div class="feature" style="text-align: center; background: #f9f9f9; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+      <!-- الصورة -->
+      <img src="S8MaxVUltra_A_Fr.webp" style="width: 100%; height: auto; border-radius: 10px; margin-bottom: 15px;">
+
+            <!-- العنوان -->
+            <h3 style="font-size: 1.8rem; color: #333; margin-bottom: 10px;">Roborock S8 MaxV Ultra</h3>
+
+            <!-- النص -->
+            <p style="color: #555; line-height: 1.6; margin-bottom: 15px;">
+                Découvrez la maîtrise inégalée du S8 MaxV Ultra. Il peut gérer les zones difficiles d’accès grâce à sa technologie de nettoyage des bords et des coins. Gagnez en commodité avec la station RockDock®️ Ultra, la reconnaissance d’obstacles Reactive AI 2.0 et l’assistant vocal intelligent intégré. Cet appareil redéfinit votre expérience en vous offrant un foyer impeccable.
+            </p>
+
+            <!-- الأسعار -->
+            <div style="margin-bottom: 15px;">
+                <span style="font-size: 1.2rem; text-decoration: line-through; color: #999; margin-right: 10px;">1499€</span>
+                <span style="font-size: 1.6rem; font-weight: bold; color: red;">799€</span>
+            </div>
+
+            <!-- تخفيضات رأس السنة -->
+            <div style="
+                background: linear-gradient(45deg, #ff4c4c, #ff8282);
+                color: white;
+                padding: 15px;
+                border-radius: 10px;
+                font-size: 1rem;
+                font-weight: bold;
+                margin-bottom: 20px;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+                🎉 Nouvelle Année : Profitez des Soldes jusqu'à -60% pour une maison plus propre en 2025 !
+            </div>
+
+            <!-- Button with link -->
+            <a href="page-livraison.html">
+                <button style="
+                    background-color: red;
+                    color: white;
+                    border: none;
+                    padding: 10px 20px;
+                    border-radius: 5px;
+                    font-size: 1rem;
+                    cursor: pointer;
+                    transition: 0.3s ease;
+                    font-weight: bold;
+                    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);"
+                    onmouseover="this.style.backgroundColor='#e44141';"
+                    onmouseout="this.style.backgroundColor='red';">
+                    Acheter Maintenant
+                </button>
+            </a>
         </div>
-        <!-- يمكنك إضافة المزيد من المنتجات هنا -->
     </div>
-
-    <!-- نموذج إدخال معلومات الزبون -->
-    <div id="customer-info" class="hidden">
-        <h3 id="selected-product-name">Produit</h3>
-        <img id="selected-product-image" src="" alt="Produit">
-        <p id="selected-product-price">Prix: €</p>
-        
-        <form id="order-form">
-            <label>Prénom:</label>
-            <input type="text" id="prenom" name="prenom" required><br><br>
-            <label>Nom:</label>
-            <input type="text" id="nom" name="nom" required><br><br>
-            <label>Adresse:</label>
-            <input type="text" id="adresse" name="adresse" required><br><br>
-            <label>Email:</label>
-            <input type="email" id="email" name="email" required><br><br>
-            <label>Numéro de téléphone:</label>
-            <input type="tel" id="telephone" name="telephone" required><br><br>
-            <button type="button" onclick="sendToTelegram()">Envoyer</button>
-        </form>
-    </div>
-
-    <script>
-        // عرض النموذج وإخفاء باقي الصفحة
-        function showCustomerForm(name, price, image) {
-            // إخفاء قائمة المنتجات
-            document.getElementById('product-list').style.display = 'none';
-
-            // عرض النموذج
-            const customerInfo = document.getElementById('customer-info');
-            customerInfo.style.display = 'block';
-
-            // تحديث تفاصيل المنتج
-            document.getElementById('selected-product-name').textContent = name;
-            document.getElementById('selected-product-price').textContent = Prix: ${price} €;
-            document.getElementById('selected-product-image').src = image;
-        }
-
-        // إرسال البيانات إلى Telegram
-        function sendToTelegram() {
-            const telegramToken = 'YOUR_TELEGRAM_BOT_TOKEN'; // ضع التوكن هنا
-            const chatId = 'YOUR_CHAT_ID'; // ضع معرف الشات هنا
-
-            // جمع البيانات
-            const prenom = document.getElementById('prenom').value;
-            const nom = document.getElementById('nom').value;
-            const adresse = document.getElementById('adresse').value;
-            const email = document.getElementById('email').value;
-            const telephone = document.getElementById('telephone').value;
-            const productName = document.getElementById('selected-product-name').textContent;
-            const productPrice = document.getElementById('selected-product-price').textContent;
-
-            const message = `
-Nouvelle Commande:
-Produit: ${productName}
-Prix: ${productPrice}
-Prénom: ${prenom}
-Nom: ${nom}
-Adresse: ${adresse}
-Email: ${email}
-Téléphone: ${telephone}
-            `;
-
-            // إرسال الطلب إلى Telegram
-            fetch(https://api.telegram.org/bot${telegramToken}/sendMessage, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({
-                    chat_id: chatId,
-                    text: message,
-                }),
-            })
-            .then(response => {
-                if (response.ok) {
-                    alert('Commande envoyée avec succès!');
-                    location.reload(); // إعادة تحميل الصفحة
-                } else {
-                    alert('Erreur lors de l\'envoi de la commande.');
-                }
-            })
-            .catch(error => {
-                alert('Erreur réseau.');
-                console.error(error);
-            });
-        }
-    </script>
-
-    <script>
-      // عرض نموذج العميل مع معلومات المنتج
-      function showCustomerForm(name, price, image) {
-        // إخفاء قائمة المنتجات
-        document.getElementById('product-list').style.display = 'none';
-
-        // عرض نموذج المعلومات
-        const customerInfo = document.getElementById('customer-info');
-        customerInfo.style.display = 'block';
-
-        // تحديث تفاصيل المنتج
-        document.getElementById('selected-product-name').textContent = name;
-        document.getElementById('selected-product-price').textContent = Prix: ${price} €;
-        document.getElementById('selected-product-image').src = image;
-      }
-
-      // إرسال البيانات إلى Telegram
-      function sendToTelegram() {
-        const telegramToken = 'YOUR_TELEGRAM_BOT_TOKEN'; // ضع توكن البوت هنا
-        const chatId = 'YOUR_CHAT_ID'; // ضع معرف الشات هنا
-
-        // جمع البيانات
-        const prenom = document.getElementById('prenom').value;
-        const nom = document.getElementById('nom').value;
-        const adresse = document.getElementById('adresse').value;
-        const email = document.getElementById('email').value;
-        const telephone = document.getElementById('telephone').value;
-        const productName = document.getElementById('selected-product-name').textContent;
-        const productPrice = document.getElementById('selected-product-price').textContent;
-
-        const message = `
-Nouvelle Commande:
-Produit: ${productName}
-Prix: ${productPrice}
-Prénom: ${prenom}
-Nom: ${nom}
-Adresse: ${adresse}
-Email: ${email}
-Téléphone: ${telephone}
-        `;
-
-        // إرسال الطلب إلى Telegram
-        fetch(https://api.telegram.org/bot${telegramToken}/sendMessage, {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({
-            chat_id: chatId,
-            text: message,
-          }),
-        })
-          .then((response) => {
-            if (response.ok) {
-              alert('Commande envoyée avec succès!');
-              location.reload(); // إعادة تحميل الصفحة
-            } else {
-              alert('Erreur lors de l\'envoi de la commande.');
-            }
-          })
-          .catch((error) => {
-            alert('Erreur réseau.');
-            console.error(error);
-          });
-      }
-    </script>
-  </section>
+</section>
 
   <section class="features">
     <div class="feature-container">
