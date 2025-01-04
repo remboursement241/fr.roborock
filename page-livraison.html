@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulaire de Contact</title>
+    <title>Produit - Livraison</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <style>
         /* التنسيقات */
         * {
@@ -20,10 +19,10 @@
         }
         .product-details {
             text-align: center;
-            margin-bottom: 30px;
+            margin: 20px 0;
         }
         .product-details img {
-            max-width: 100%;
+            max-width: 80%;
             height: auto;
             border-radius: 10px;
             margin-bottom: 15px;
@@ -38,49 +37,98 @@
             color: red;
             font-weight: bold;
         }
+        .promo-banner {
+            background-color: #e94e77;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 25px;
+            border-radius: 6px;
+        }
+        .container {
+            width: 80%;
+            max-width: 900px;
+            margin: 40px auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+        }
+        .form-group {
+            margin-bottom: 25px;
+        }
+        .form-group label {
+            font-size: 1rem;
+            color: #666;
+            margin-bottom: 8px;
+            display: block;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 15px;
+            font-size: 1rem;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+        }
+        .form-group input:focus {
+            border-color: #1A2B41;
+            background-color: #fff;
+            outline: none;
+        }
+        .form-group input[type="submit"] {
+            background-color: #e94e77;
+            color: white;
+            border: none;
+            font-size: 1.1rem;
+            padding: 15px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        footer {
+            text-align: center;
+            background-color: #1A2B41;
+            color: white;
+            padding: 20px;
+            font-size: 0.9rem;
+        }
     </style>
 </head>
 <body>
 
-    <!-- تفاصيل المنتج -->
+    <!-- عرض تفاصيل المنتج -->
     <div class="product-details">
         <img id="product-image" src="" alt="Produit">
         <h1 id="product-name"></h1>
         <p id="product-price"></p>
     </div>
 
-    <!-- تخفيضات رأس السنة -->
+    <!-- رسالة التخفيض -->
     <div class="promo-banner">
         🎉 Nouvelle Année : Profitez des Soldes jusqu'à -60% pour une maison plus propre en 2025 !
     </div>
 
+    <!-- استمارة المعلومات -->
     <div class="container">
-        <div style="background: linear-gradient(45deg, #00C6FF, #0072FF); color: white; padding: 15px; border-radius: 10px; font-size: 1rem; font-weight: bold; margin-bottom: 20px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
-            Veuillez renseigner vos informations pour garantir une livraison rapide et précise de votre produit à l'adresse souhaitée.
-        </div>
-
         <form action="submit_form.php" method="POST">
-            <!-- حقول الإدخال -->
             <div class="form-group">
                 <label for="prenom">Prénom *</label>
                 <input type="text" id="prenom" name="prenom" required placeholder="Entrez votre prénom">
             </div>
-
             <div class="form-group">
                 <label for="nom">Nom *</label>
                 <input type="text" id="nom" name="nom" required placeholder="Entrez votre nom">
             </div>
-
             <div class="form-group">
                 <label for="rue">Rue *</label>
                 <input type="text" id="rue" name="rue" required placeholder="Entrez votre rue">
             </div>
-
             <div class="form-group">
                 <label for="code_postal">Code postal *</label>
                 <input type="text" id="code_postal" name="code_postal" required placeholder="Entrez votre code postal">
             </div>
-
             <div class="form-group">
                 <input type="submit" value="Finaliser votre panier">
             </div>
@@ -88,20 +136,25 @@
     </div>
 
     <footer>
-        <p>&copy; 2025 Roborock. Tous droits réservés. <a href="#">Politique de confidentialité</a> | <a href="#">Conditions d'utilisation</a></p>
+        <p>&copy; 2025 Roborock. Tous droits réservés.</p>
     </footer>
 
+    <!-- استخراج البيانات وعرضها -->
     <script>
-        // استخراج المعلومات من الرابط
+        // استخراج البيانات من الرابط
         const params = new URLSearchParams(window.location.search);
         const productName = params.get("name");
         const productPrice = params.get("price");
         const productImage = params.get("image");
 
-        // عرض تفاصيل المنتج
-        document.getElementById("product-name").textContent = productName;
-        document.getElementById("product-price").textContent = Prix: ${productPrice} €;
-        document.getElementById("product-image").src = productImage;
+        // التحقق من البيانات
+        if (productName && productPrice && productImage) {
+            document.getElementById("product-name").textContent = productName;
+            document.getElementById("product-price").textContent = Prix: ${productPrice} €;
+            document.getElementById("product-image").src = productImage;
+        } else {
+            console.error("Données du produit manquantes !");
+        }
     </script>
 
 </body>
