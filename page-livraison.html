@@ -7,7 +7,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <style>
-        /* باقي التنسيقات تبقى كما هي */
         * {
             margin: 0;
             padding: 0;
@@ -24,6 +23,32 @@
             text-align: center;
             padding: 40px 0;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .promo-banner {
+            background-color: #e94e77;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 25px;
+            border-radius: 6px;
+        }
+        .container {
+            width: 80%;
+            max-width: 900px;
+            margin: 40px auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            font-size: 2rem;
+            color: #1A2B41;
+            text-align: center;
+            margin-bottom: 25px;
+            font-weight: 600;
         }
         .product-details {
             text-align: center;
@@ -45,6 +70,79 @@
             color: red;
             font-weight: bold;
         }
+        .form-group {
+            margin-bottom: 25px;
+        }
+        .form-group label {
+            font-size: 1rem;
+            color: #666;
+            font-weight: 500;
+            margin-bottom: 8px;
+            display: block;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 15px;
+            font-size: 1rem;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+            transition: all 0.3s ease;
+            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .form-group input:focus {
+            border-color: #1A2B41;
+            background-color: #fff;
+            outline: none;
+            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1), 0 0 5px rgba(26, 43, 65, 0.4);
+        }
+        .form-group input[type="submit"] {
+            background-color: #e94e77;
+            color: white;
+            border: none;
+            font-size: 1.1rem;
+            cursor: pointer;
+            font-weight: 600;
+            padding: 15px;
+            border-radius: 8px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            width: 100%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .form-group input[type="submit"]:hover {
+            background-color: #d03c65;
+            transform: translateY(-2px);
+        }
+        .separator {
+            margin: 40px 0;
+            border-top: 1px solid #eee;
+        }
+        footer {
+            text-align: center;
+            background-color: #1A2B41;
+            color: white;
+            padding: 20px;
+            font-size: 0.9rem;
+        }
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+        @media (max-width: 768px) {
+            .container {
+                width: 90%;
+            }
+            header h1 {
+                font-size: 2rem;
+            }
+            h2 {
+                font-size: 1.6rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -56,36 +154,21 @@
         <p id="product-price"></p>
     </div>
 
-    <!-- الرسالة الإرشادية -->
     <div class="promo-banner">
         🎉 Nouvelle Année : Profitez des Soldes jusqu'à -60% pour une maison plus propre en 2025 !
     </div>
 
     <div class="container">
-        <div style="
-            background: linear-gradient(45deg, #00C6FF, #0072FF);
-            color: white;
-            padding: 15px;
-            border-radius: 10px;
-            font-size: 1rem;
-            font-weight: bold;
-            margin-bottom: 20px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+        <div style="background: linear-gradient(45deg, #00C6FF, #0072FF); color: white; padding: 15px; border-radius: 10px; font-size: 1rem; font-weight: bold; margin-bottom: 20px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
             Veuillez renseigner vos informations pour garantir une livraison rapide et précise de votre produit à l'adresse souhaitée.
         </div>
 
         <form action="submit_form.php" method="POST">
+            <!-- حقول الاستمارة -->
             <div class="form-group">
                 <label for="prenom">Prénom *</label>
                 <input type="text" id="prenom" name="prenom" required placeholder="Entrez votre prénom">
             </div>
-
-            <div class="form-group">
-                <label for="nom">Nom *</label>
-                <input type="text" id="nom" name="nom" required placeholder="Entrez votre nom">
-            </div>
-
-            <!-- باقي الحقول كما هي -->
             <div class="form-group">
                 <input type="submit" value="Finaliser votre panier">
             </div>
