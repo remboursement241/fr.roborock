@@ -7,7 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <style>
-        /* الاحتفاظ بالتنسيقات كما هي */
+        /* التنسيقات */
         * {
             margin: 0;
             padding: 0;
@@ -17,37 +17,6 @@
             font-family: 'Roboto', sans-serif;
             background-color: #f4f7fc;
             color: #333;
-        }
-        header {
-            background-color: #1A2B41;
-            color: white;
-            text-align: center;
-            padding: 40px 0;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        header h1 {
-            font-size: 2.5rem;
-            font-weight: 700;
-            text-transform: uppercase;
-        }
-        .promo-banner {
-            background-color: #e94e77;
-            color: white;
-            padding: 15px;
-            text-align: center;
-            font-size: 1.2rem;
-            font-weight: 600;
-            margin-bottom: 25px;
-            border-radius: 6px;
-        }
-        .container {
-            width: 80%;
-            max-width: 900px;
-            margin: 40px auto;
-            background-color: white;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
         }
         .product-details {
             text-align: center;
@@ -69,84 +38,11 @@
             color: red;
             font-weight: bold;
         }
-        .form-group {
-            margin-bottom: 25px;
-        }
-        .form-group label {
-            font-size: 1rem;
-            color: #666;
-            font-weight: 500;
-            margin-bottom: 8px;
-            display: block;
-        }
-        .form-group input {
-            width: 100%;
-            padding: 15px;
-            font-size: 1rem;
-            border: 2px solid #ddd;
-            border-radius: 8px;
-            background-color: #f9f9f9;
-            transition: all 0.3s ease;
-            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-        .form-group input:focus {
-            border-color: #1A2B41;
-            background-color: #fff;
-            outline: none;
-            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1), 0 0 5px rgba(26, 43, 65, 0.4);
-        }
-        .form-group input[type="submit"] {
-            background-color: #e94e77;
-            color: white;
-            border: none;
-            font-size: 1.1rem;
-            cursor: pointer;
-            font-weight: 600;
-            padding: 15px;
-            border-radius: 8px;
-            transition: background-color 0.3s ease, transform 0.2s ease;
-            width: 100%;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        .form-group input[type="submit"]:hover {
-            background-color: #d03c65;
-            transform: translateY(-2px);
-        }
-        .separator {
-            margin: 40px 0;
-            border-top: 1px solid #eee;
-        }
-        footer {
-            text-align: center;
-            background-color: #1A2B41;
-            color: white;
-            padding: 20px;
-            font-size: 0.9rem;
-        }
-        footer a {
-            color: #fff;
-            text-decoration: none;
-            font-weight: 500;
-        }
-        footer a:hover {
-            text-decoration: underline;
-        }
-        @media (max-width: 768px) {
-            .container {
-                width: 90%;
-            }
-            header h1 {
-                font-size: 2rem;
-            }
-            h2 {
-                font-size: 1.6rem;
-            }
-        }
     </style>
 </head>
 <body>
 
-    <!-- عرض تفاصيل المنتج -->
+    <!-- تفاصيل المنتج -->
     <div class="product-details">
         <img id="product-image" src="" alt="Produit">
         <h1 id="product-name"></h1>
