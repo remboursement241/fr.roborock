@@ -4,179 +4,88 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulaire de Livraison</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
         body {
-            font-family: 'Roboto', sans-serif;
-            background-color: #f4f7fc;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
             color: #333;
-        }
-        header {
-            background-color: #1A2B41;
-            color: white;
-            text-align: center;
-            padding: 40px 0;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        header h1 {
-            font-size: 2.5rem;
-            font-weight: 700;
-            text-transform: uppercase;
         }
         .container {
-            width: 80%;
-            max-width: 900px;
-            margin: 40px auto;
-            background-color: white;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 600px;
+            margin: 20px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            text-align: center;
+            margin-bottom: 20px;
         }
         h2 {
-            font-size: 2rem;
-            color: #1A2B41;
-            text-align: center;
-            margin-bottom: 25px;
-            font-weight: 600;
-        }
-        .product-details {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-        .product-details h3 {
-            font-size: 1.8rem;
-            color: #333;
-        }
-        .product-details p {
-            font-size: 1.5rem;
             color: red;
-            font-weight: bold;
         }
         .form-group {
-            margin-bottom: 25px;
+            margin-bottom: 15px;
         }
         .form-group label {
-            font-size: 1rem;
-            color: #666;
-            font-weight: 500;
-            margin-bottom: 8px;
             display: block;
+            margin-bottom: 5px;
         }
         .form-group input {
             width: 100%;
-            padding: 15px;
-            font-size: 1rem;
-            border: 2px solid #ddd;
-            border-radius: 8px;
-            background-color: #f9f9f9;
-            transition: all 0.3s ease;
-            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-        .form-group input:focus {
-            border-color: #1A2B41;
-            background-color: #fff;
-            outline: none;
-            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1), 0 0 5px rgba(26, 43, 65, 0.4);
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
         }
         .form-group input[type="submit"] {
-            background-color: #e94e77;
-            color: white;
-            border: none;
-            font-size: 1.1rem;
-            cursor: pointer;
-            font-weight: 600;
-            padding: 15px;
-            border-radius: 8px;
-            transition: background-color 0.3s ease, transform 0.2s ease;
-            width: 100%;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        .form-group input[type="submit"]:hover {
-            background-color: #d03c65;
-            transform: translateY(-2px);
-        }
-        footer {
-            text-align: center;
-            background-color: #1A2B41;
-            color: white;
-            padding: 20px;
-            font-size: 0.9rem;
-        }
-        footer a {
+            background: red;
             color: #fff;
-            text-decoration: none;
-            font-weight: 500;
-        }
-        footer a:hover {
-            text-decoration: underline;
+            border: none;
+            cursor: pointer;
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <div class="product-details">
-            <h3 id="product-name">Nom du produit</h3>
-            <p id="product-price">Prix</p>
-        </div>
+        <h1 id="product-name">Nom du produit</h1>
+        <h2 id="product-price">Prix</h2>
+
         <form action="submit_form.php" method="POST">
             <div class="form-group">
-                <label for="prenom">Prénom *</label>
-                <input type="text" id="prenom" name="prenom" required placeholder="Entrez votre prénom">
+                <label for="prenom">Prénom</label>
+                <input type="text" id="prenom" name="prenom" required>
             </div>
             <div class="form-group">
-                <label for="nom">Nom *</label>
-                <input type="text" id="nom" name="nom" required placeholder="Entrez votre nom">
+                <label for="nom">Nom</label>
+                <input type="text" id="nom" name="nom" required>
             </div>
             <div class="form-group">
-                <label for="rue">Rue *</label>
-                <input type="text" id="rue" name="rue" required placeholder="Entrez votre rue">
+                <label for="adresse">Adresse</label>
+                <input type="text" id="adresse" name="adresse" required>
             </div>
             <div class="form-group">
-                <label for="numero">N°</label>
-                <input type="text" id="numero" name="numero" placeholder="Entrez votre numéro de rue">
-            </div>
-            <div class="form-group">
-                <label for="code_postal">Code postal *</label>
-                <input type="text" id="code_postal" name="code_postal" required placeholder="Entrez votre code postal">
-            </div>
-            <div class="form-group">
-                <label for="ville">Ville *</label>
-                <input type="text" id="ville" name="ville" required placeholder="Entrez votre ville">
-            </div>
-            <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="Entrez votre email">
-            </div>
-            <div class="form-group">
-                <label for="telephone">Numéro de téléphone</label>
-                <input type="tel" id="telephone" name="telephone" placeholder="Entrez votre numéro de téléphone">
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Finaliser votre panier">
+                <input type="submit" value="Confirmer">
             </div>
         </form>
     </div>
 
-    <footer>
-        <p>&copy; 2025 Roborock. Tous droits réservés. <a href="#">Politique de confidentialité</a> | <a href="#">Conditions d'utilisation</a></p>
-    </footer>
-
     <script>
-        // استخراج القيم من الرابط
+        // استخراج البيانات من الرابط
         const urlParams = new URLSearchParams(window.location.search);
-        const productName = urlParams.get('product') || 'Nom du produit';
-        const productPrice = urlParams.get('price') || 'Prix';
+        const productName = urlParams.get('product');
+        const productPrice = urlParams.get('price');
 
-        // تحديث نصوص المنتج والسعر
-        document.getElementById('product-name').textContent = productName;
-        document.getElementById('product-price').textContent = productPrice + ' €';
+        // تحديث المحتوى في الصفحة
+        if (productName && productPrice) {
+            document.getElementById('product-name').textContent = productName;
+            document.getElementById('product-price').textContent = productPrice + ' €';
+        } else {
+            document.getElementById('product-name').textContent = "Produit inconnu";
+            document.getElementById('product-price').textContent = "Prix inconnu";
+        }
     </script>
 </body>
 </html>
