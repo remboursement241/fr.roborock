@@ -160,24 +160,13 @@
     </div>
 
     <div class="container">
-        <!-- تخفيضات رأس السنة -->
-        <div style="
-            background: linear-gradient(45deg, #00C6FF, #0072FF);
-            color: white;
-            padding: 15px;
-            border-radius: 10px;
-            font-size: 1rem;
-            font-weight: bold;
-            margin-bottom: 20px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
-            Veuillez renseigner vos informations pour garantir une livraison rapide et précise de votre produit à l'adresse souhaitée.
-        </div>        
+        <!-- معلومات المنتج والسعر -->
+        <div id="product-details" style="margin-bottom: 20px;">
+            <h2 id="product-name" style="color: #1A2B41; font-size: 1.8rem; margin-bottom: 10px;">Nom du produit</h2>
+            <p id="product-price" style="color: red; font-size: 1.5rem; font-weight: bold;">Prix</p>
+        </div>
 
         <form action="submit_form.php" method="POST">
-            <!-- حقول المنتج والثمن -->
-            <input type="hidden" id="product_name" name="product_name" value="Robot Aspirateur X200">
-            <input type="hidden" id="product_price" name="product_price" value="299.99">
-
             <div class="form-group">
                 <label for="prenom">Prénom *</label>
                 <input type="text" id="prenom" name="prenom" required placeholder="Entrez votre prénom">
@@ -230,5 +219,15 @@
         <p>&copy; 2025 Roborock. Tous droits réservés. <a href="#">Politique de confidentialité</a> | <a href="#">Conditions d'utilisation</a></p>
     </footer>
 
+    <script>
+        // استخراج القيم من الرابط
+        const urlParams = new URLSearchParams(window.location.search);
+        const product = urlParams.get('product');
+        const price = urlParams.get('price');
+
+        // عرض المنتج والسعر في الصفحة
+        document.getElementById('product-name').textContent = product || 'Nom du produit';
+        document.getElementById('product-price').textContent = price || 'Prix';
+    </script>
 </body>
 </html>
