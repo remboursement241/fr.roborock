@@ -531,30 +531,33 @@
         </div>
 
         <!-- Button with link -->
-        <a id="purchase-link" href="page-livraison.html">
-          <button style="
-              background-color: red;
-              color: white;
-              border: none;
-              padding: 10px 20px;
-              border-radius: 5px;
-              font-size: 1rem;
-              cursor: pointer;
-              transition: 0.3s ease;
-              font-weight: bold;
-              box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);"
-              onmouseover="this.style.backgroundColor='#e44141';"
-              onmouseout="this.style.backgroundColor='red';">
-            Acheter Maintenant
-          </button>
-<script>
-  // استهداف اسم المنتج والسعر من الصفحة
-  const productName = document.getElementById('product-name').textContent;
-  const productPrice = document.getElementById('product-price').textContent;
+        <!-- Button with link -->
+<a id="purchase-link" href="page-livraison.html">
+    <button style="
+        background-color: red;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: 0.3s ease;
+        font-weight: bold;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);"
+        onmouseover="this.style.backgroundColor='#e44141';"
+        onmouseout="this.style.backgroundColor='red';">
+        Acheter Maintenant
+    </button>
+</a>
 
-  // تحديث الرابط لإضافة المنتج والسعر
-  const purchaseLink = document.getElementById('purchase-link');
-  purchaseLink.href = page-livraison.html?product=${encodeURIComponent(productName)}&price=${encodeURIComponent(productPrice)};
+<script>
+    // استهداف اسم المنتج والسعر من الصفحة
+    const productName = document.getElementById('product-name').textContent;
+    const productPrice = document.getElementById('product-price').textContent;
+
+    // تحديث الرابط لإضافة المنتج والسعر
+    const purchaseLink = document.getElementById('purchase-link');
+    purchaseLink.href = page-livraison.html?product=${encodeURIComponent(productName)}&price=${encodeURIComponent(productPrice)};
 </script>
             </a>
         </div>
