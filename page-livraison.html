@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulaire de Contact</title>
+    <title>Formulaire de Livraison</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <style>
@@ -18,7 +18,7 @@
             color: #333;
         }
         header {
-            background-color: #1A2B41; /* Bleu foncé */
+            background-color: #1A2B41;
             color: white;
             text-align: center;
             padding: 40px 0;
@@ -29,18 +29,6 @@
             font-weight: 700;
             text-transform: uppercase;
         }
-
-        .promo-banner {
-            background-color: #e94e77; /* Rouge moderne */
-            color: white;
-            padding: 15px;
-            text-align: center;
-            font-size: 1.2rem;
-            font-weight: 600;
-            margin-bottom: 25px;
-            border-radius: 6px;
-        }
-
         .container {
             width: 80%;
             max-width: 900px;
@@ -50,19 +38,29 @@
             border-radius: 15px;
             box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
         }
-
         h2 {
             font-size: 2rem;
-            color: #1A2B41; /* Bleu foncé */
+            color: #1A2B41;
             text-align: center;
             margin-bottom: 25px;
             font-weight: 600;
         }
-
+        .product-details {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .product-details h3 {
+            font-size: 1.8rem;
+            color: #333;
+        }
+        .product-details p {
+            font-size: 1.5rem;
+            color: red;
+            font-weight: bold;
+        }
         .form-group {
             margin-bottom: 25px;
         }
-
         .form-group label {
             font-size: 1rem;
             color: #666;
@@ -70,7 +68,6 @@
             margin-bottom: 8px;
             display: block;
         }
-
         .form-group input {
             width: 100%;
             padding: 15px;
@@ -81,14 +78,12 @@
             transition: all 0.3s ease;
             box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
         }
-
         .form-group input:focus {
             border-color: #1A2B41;
             background-color: #fff;
             outline: none;
             box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1), 0 0 5px rgba(26, 43, 65, 0.4);
         }
-
         .form-group input[type="submit"] {
             background-color: #e94e77;
             color: white;
@@ -99,20 +94,13 @@
             padding: 15px;
             border-radius: 8px;
             transition: background-color 0.3s ease, transform 0.2s ease;
-            width: 100%; /* Pour qu'il prenne toute la largeur */
+            width: 100%;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
-
         .form-group input[type="submit"]:hover {
-            background-color: #d03c65; /* Darker red */
-            transform: translateY(-2px); /* Effet de survol */
+            background-color: #d03c65;
+            transform: translateY(-2px);
         }
-
-        .separator {
-            margin: 40px 0;
-            border-top: 1px solid #eee;
-        }
-
         footer {
             text-align: center;
             background-color: #1A2B41;
@@ -120,100 +108,61 @@
             padding: 20px;
             font-size: 0.9rem;
         }
-
         footer a {
             color: #fff;
             text-decoration: none;
             font-weight: 500;
         }
-
         footer a:hover {
             text-decoration: underline;
-        }
-
-        @media (max-width: 768px) {
-            .container {
-                width: 90%;
-            }
-            header h1 {
-                font-size: 2rem;
-            }
-            h2 {
-                font-size: 1.6rem;
-            }
         }
     </style>
 </head>
 <body>
 
-    <!-- تخفيضات رأس السنة -->
-    <div style="
-        background: linear-gradient(45deg, #ff4c4c, #ff8282);
-        color: white;
-        padding: 15px;
-        border-radius: 10px;
-        font-size: 1rem;
-        font-weight: bold;
-        margin-bottom: 20px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
-        🎉 Nouvelle Année : Profitez des Soldes jusqu'à -60% pour une maison plus propre en 2025 !
-    </div>
-
     <div class="container">
-        <!-- معلومات المنتج والسعر -->
-        <div id="product-details" style="margin-bottom: 20px;">
-            <h2 id="product-name" style="color: #1A2B41; font-size: 1.8rem; margin-bottom: 10px;">Nom du produit</h2>
-            <p id="product-price" style="color: red; font-size: 1.5rem; font-weight: bold;">Prix</p>
+        <div class="product-details">
+            <h3 id="product-name">Nom du produit</h3>
+            <p id="product-price">Prix</p>
         </div>
-
         <form action="submit_form.php" method="POST">
             <div class="form-group">
                 <label for="prenom">Prénom *</label>
                 <input type="text" id="prenom" name="prenom" required placeholder="Entrez votre prénom">
             </div>
-
             <div class="form-group">
                 <label for="nom">Nom *</label>
                 <input type="text" id="nom" name="nom" required placeholder="Entrez votre nom">
             </div>
-
             <div class="form-group">
                 <label for="rue">Rue *</label>
                 <input type="text" id="rue" name="rue" required placeholder="Entrez votre rue">
             </div>
-
             <div class="form-group">
                 <label for="numero">N°</label>
                 <input type="text" id="numero" name="numero" placeholder="Entrez votre numéro de rue">
             </div>
-
             <div class="form-group">
                 <label for="code_postal">Code postal *</label>
                 <input type="text" id="code_postal" name="code_postal" required placeholder="Entrez votre code postal">
             </div>
-
             <div class="form-group">
                 <label for="ville">Ville *</label>
                 <input type="text" id="ville" name="ville" required placeholder="Entrez votre ville">
             </div>
-
             <div class="form-group">
                 <label for="email">Email</label>
                 <input type="email" id="email" name="email" placeholder="Entrez votre email">
             </div>
-
             <div class="form-group">
                 <label for="telephone">Numéro de téléphone</label>
                 <input type="tel" id="telephone" name="telephone" placeholder="Entrez votre numéro de téléphone">
             </div>
-
             <div class="form-group">
                 <input type="submit" value="Finaliser votre panier">
             </div>
         </form>
     </div>
-
-    <div class="separator"></div>
 
     <footer>
         <p>&copy; 2025 Roborock. Tous droits réservés. <a href="#">Politique de confidentialité</a> | <a href="#">Conditions d'utilisation</a></p>
@@ -222,12 +171,12 @@
     <script>
         // استخراج القيم من الرابط
         const urlParams = new URLSearchParams(window.location.search);
-        const product = urlParams.get('product');
-        const price = urlParams.get('price');
+        const productName = urlParams.get('product') || 'Nom du produit';
+        const productPrice = urlParams.get('price') || 'Prix';
 
-        // عرض المنتج والسعر في الصفحة
-        document.getElementById('product-name').textContent = product || 'Nom du produit';
-        document.getElementById('product-price').textContent = price || 'Prix';
+        // تحديث نصوص المنتج والسعر
+        document.getElementById('product-name').textContent = productName;
+        document.getElementById('product-price').textContent = productPrice + ' €';
     </script>
 </body>
 </html>
