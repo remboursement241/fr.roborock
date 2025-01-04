@@ -7,6 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <style>
+        /* الاحتفاظ بالتنسيقات كما هي */
         * {
             margin: 0;
             padding: 0;
@@ -23,6 +24,11 @@
             text-align: center;
             padding: 40px 0;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-transform: uppercase;
         }
         .promo-banner {
             background-color: #e94e77;
@@ -42,13 +48,6 @@
             padding: 30px;
             border-radius: 15px;
             box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-        }
-        h2 {
-            font-size: 2rem;
-            color: #1A2B41;
-            text-align: center;
-            margin-bottom: 25px;
-            font-weight: 600;
         }
         .product-details {
             text-align: center;
@@ -147,13 +146,14 @@
 </head>
 <body>
 
-    <!-- تفاصيل المنتج -->
+    <!-- عرض تفاصيل المنتج -->
     <div class="product-details">
         <img id="product-image" src="" alt="Produit">
         <h1 id="product-name"></h1>
         <p id="product-price"></p>
     </div>
 
+    <!-- تخفيضات رأس السنة -->
     <div class="promo-banner">
         🎉 Nouvelle Année : Profitez des Soldes jusqu'à -60% pour une maison plus propre en 2025 !
     </div>
@@ -164,11 +164,27 @@
         </div>
 
         <form action="submit_form.php" method="POST">
-            <!-- حقول الاستمارة -->
+            <!-- حقول الإدخال -->
             <div class="form-group">
                 <label for="prenom">Prénom *</label>
                 <input type="text" id="prenom" name="prenom" required placeholder="Entrez votre prénom">
             </div>
+
+            <div class="form-group">
+                <label for="nom">Nom *</label>
+                <input type="text" id="nom" name="nom" required placeholder="Entrez votre nom">
+            </div>
+
+            <div class="form-group">
+                <label for="rue">Rue *</label>
+                <input type="text" id="rue" name="rue" required placeholder="Entrez votre rue">
+            </div>
+
+            <div class="form-group">
+                <label for="code_postal">Code postal *</label>
+                <input type="text" id="code_postal" name="code_postal" required placeholder="Entrez votre code postal">
+            </div>
+
             <div class="form-group">
                 <input type="submit" value="Finaliser votre panier">
             </div>
@@ -180,13 +196,13 @@
     </footer>
 
     <script>
-        // استخراج البيانات من الرابط
+        // استخراج المعلومات من الرابط
         const params = new URLSearchParams(window.location.search);
         const productName = params.get("name");
         const productPrice = params.get("price");
         const productImage = params.get("image");
 
-        // عرض البيانات في الصفحة
+        // عرض تفاصيل المنتج
         document.getElementById("product-name").textContent = productName;
         document.getElementById("product-price").textContent = Prix: ${productPrice} €;
         document.getElementById("product-image").src = productImage;
